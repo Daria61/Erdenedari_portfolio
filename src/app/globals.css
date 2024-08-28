@@ -9,9 +9,10 @@
 html,
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: "#7659AB";
 }
 
-/* body{
+/* body {
   overflow: hidden;
 } */
 
@@ -21,6 +22,10 @@ p,
 span,
 svg {
   transition: background-color 0.5s, color 0.5s;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 :root {
@@ -63,12 +68,13 @@ svg {
 
 /* Preloader */
 .preloader {
-  background-color: var(--color-background-dark);
+  background-color: #aaaeda;
   width: 100%;
   height: 100vh;
   position: fixed;
   opacity: 1;
   z-index: 99999999999999999;
+  transition: ease-out 4;
 }
 
 .preloader-wrapper {
@@ -118,7 +124,7 @@ svg {
 
 /* Page Itself --------------------------------------------- */
 .page {
-  z-index: 99999;
+  z-index: 1;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -168,7 +174,7 @@ svg {
 }
 
 /* Toggle Bar --------------------------------------------- */
-.toggle-bar {
+/* .toggle-bar {
   position: fixed;
   display: flex;
   opacity: 0;
@@ -220,7 +226,7 @@ svg {
 
 .slide {
   left: 31px;
-}
+} */
 
 /* Section Formatting --------------------------------------------- */
 .section-margin {
@@ -230,10 +236,9 @@ svg {
 
 .section {
   position: relative;
-  width: 50%;
-  padding: 1000px 4%;
+  padding: 500px 4%;
   margin: 0;
-  background-color: var(--color-background);
+  background-color: "#e5a1aa";
   overflow: hidden;
 }
 
@@ -282,16 +287,12 @@ svg {
   position: relative;
   padding: 20% 5%;
   border-bottom: 2px solid var(--color-pink);
-  padding-bottom: 400px;
-}
-
-.section-intro-wrapper:nth-child(3) {
-  border-bottom: 2px solid var(--color-green);
+  /* padding-bottom: 400px; */
 }
 
 .section-detail-wrapper {
-  position: relative;
-  padding: 20% 5%;
+  /* position: relative; */
+  padding: 10% 5%;
 }
 
 .section-heading {
@@ -319,8 +320,8 @@ svg {
   display: block;
   font-size: 40px;
   font-weight: 500;
-  transform-origin: left;
-  transform: skewY(25deg);
+  /* transform-origin: left; */
+  /* transform: skewY(25deg); */
   z-index: 5;
   text-transform: uppercase;
   color: var(--color-pink);
@@ -354,7 +355,7 @@ svg {
 }
 
 .section-number {
-  position: absolute;
+  /* position: absolute; */
   bottom: 15px;
   right: 0;
   color: var(--color-pink);
@@ -380,7 +381,7 @@ svg {
   position: absolute;
   bottom: 168px;
   left: 0;
-  color: var(--color-text);
+  color: "#57B1A8";
 }
 
 .hero-second {
@@ -482,4 +483,8 @@ html.lenis body {
 
 .lenis.lenis-smooth iframe {
   pointer-events: none;
+}
+
+.model {
+  transform: translateX(0);
 }

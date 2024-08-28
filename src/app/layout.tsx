@@ -37,7 +37,7 @@ export default function RootLayout({
         /> */}
         <meta name="twitter:card" content="summary" />
       </head>
-      <body>{children}</body>
+      <body style={{ backgroundColor: "#7B57B1" }}>{children}</body>
     </html>
   );
 }
