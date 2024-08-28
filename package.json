@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ashthornton/asscroll": "^2.0.11",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^5.16.7",
@@ -18,7 +17,7 @@
     "@splinetool/runtime": "^1.9.20",
     "events": "^3.3.0",
     "gsap": "^3.12.5",
-    "lenis": "^1.1.11",
+    "gsap-trial": "^3.12.5",
     "next": "14.2.6",
     "react": "^18",
     "react-dom": "^18",
