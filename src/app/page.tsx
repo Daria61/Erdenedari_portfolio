@@ -1,9 +1,8 @@
 "use client";
 import Spline from "@splinetool/react-spline";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap-trial/ScrollTrigger";
-import Loader from "@/components/Loader";
 import MouseIcon from "@mui/icons-material/Mouse";
 import Image from "next/image";
 import MailIcon from "@mui/icons-material/Mail";
@@ -13,20 +12,77 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 export default function Home() {
   const [width, setWidth] = useState<number>(0);
   const [loading, setLoading] = useState(true);
-  const sections = document.querySelectorAll(".section");
   let finalXPosition = 0;
   let thirdFinalXPosition = 0;
-
-  window.addEventListener("resize", () => {
-    setWidth(window.innerWidth);
-  });
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       setWidth(window.innerWidth);
+      window.addEventListener("resize", () => {
+        setWidth(window.innerWidth);
+      });
     }
+  }, []);
 
+  useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    console.log("====================================");
+    console.log(document);
+    console.log("====================================");
+    if (
+      document &&
+      typeof document !== "undefined" &&
+      document.querySelectorAll
+    ) {
+      const sections = document.querySelectorAll(".section");
+      if (sections) {
+        sections.forEach((section) => {
+          if (section.classList.contains("right")) {
+            gsap.to(section, {
+              borderTopLeftRadius: 10,
+              scrollTrigger: {
+                trigger: section,
+                start: "top bottom",
+                end: "top top",
+                scrub: 0.6,
+                // markers: true,
+              },
+            });
+            gsap.to(section, {
+              borderBottomLeftRadius: 700,
+              scrollTrigger: {
+                trigger: section,
+                start: "bottom bottom",
+                end: "bottom top",
+                scrub: 0.6,
+                // markers: true,
+              },
+            });
+          } else {
+            gsap.to(section, {
+              borderTopRightRadius: 10,
+              scrollTrigger: {
+                trigger: section,
+                start: "top bottom",
+                end: "top top",
+                scrub: 0.6,
+                // markers: true,
+              },
+            });
+            gsap.to(section, {
+              borderBottomRightRadius: 700,
+              scrollTrigger: {
+                trigger: section,
+                start: "bottom bottom",
+                end: "bottom top",
+                scrub: 0.6,
+                // markers: true,
+              },
+            });
+          }
+        });
+      }
+    }
   }, []);
 
   gsap.to(".model", {
@@ -56,7 +112,7 @@ export default function Home() {
     {
       x: -width * 0.25,
       ease: "power1.inOut",
-      scale: 1.2,
+      scale: 1.1,
       scrollTrigger: {
         trigger: ".second_move",
         start: "top center",
@@ -91,59 +147,23 @@ export default function Home() {
     }
   );
 
-  sections.forEach((section) => {
-    if (section.classList.contains("right")) {
-      gsap.to(section, {
-        borderTopLeftRadius: 10,
-        scrollTrigger: {
-          trigger: section,
-          start: "top bottom",
-          end: "top top",
-          scrub: 0.6,
-          // markers: true,
-        },
-      });
-      gsap.to(section, {
-        borderBottomLeftRadius: 700,
-        scrollTrigger: {
-          trigger: section,
-          start: "bottom bottom",
-          end: "bottom top",
-          scrub: 0.6,
-          // markers: true,
-        },
-      });
-    } else {
-      gsap.to(section, {
-        borderTopRightRadius: 10,
-        scrollTrigger: {
-          trigger: section,
-          start: "top bottom",
-          end: "top top",
-          scrub: 0.6,
-          // markers: true,
-        },
-      });
-      gsap.to(section, {
-        borderBottomRightRadius: 700,
-        scrollTrigger: {
-          trigger: section,
-          start: "bottom bottom",
-          end: "bottom top",
-          scrub: 0.6,
-          // markers: true,
-        },
-      });
-    }
-  });
-
   return (
     <div
       style={{
         position: "relative",
       }}
     >
-      {loading && <Loader />}
+      {loading && (
+        <div className="preloader">
+          <div className="preloader-wrapper">
+            <div className="loading">
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Model */}
 
