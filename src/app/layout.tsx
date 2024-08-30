@@ -29,7 +29,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://github-production-user-asset-6210df.s3.amazonaws.com/107394167/363192726-dc3dfe44-6ff9-4b15-8dde-b39a107963a3.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240830%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240830T134600Z&X-Amz-Expires=300&X-Amz-Signature=9233290adff869a3f9530ec96ca36e14d2b885e9997eea3e1aeacd1a46df8db5&X-Amz-SignedHeaders=host&actor_id=107394167&key_id=0&repo_id=838386968"
+          content="https://imagedelivery.net/A53tyVfMYrJUAjlD4mXzBQ/bd5096ae-d42f-4f9b-a1ce-3e42f28cf900/public"
         />
         <meta name="twitter:card" content="summary" />
       </head>
