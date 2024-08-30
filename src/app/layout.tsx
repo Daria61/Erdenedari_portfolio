@@ -21,7 +21,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://private-user-images.githubusercontent.com/107394167/363201829-e1a22fdc-caf3-439d-9e51-956f436145dd.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjUwMjc2MTIsIm5iZiI6MTcyNTAyNzMxMiwicGF0aCI6Ii8xMDczOTQxNjcvMzYzMjAxODI5LWUxYTIyZmRjLWNhZjMtNDM5ZC05ZTUxLTk1NmY0MzYxNDVkZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwODMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDgzMFQxNDE1MTJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yNjhiMWRhM2M1MzNjYmQ0MTVkYzc1ZmQ4OGRjODhhOWFjZjYyMmVjMjg2Yzk4YWIwZWQxMTZhZjdmZTZkOGM4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.8LUog59PgDc0XoafdG_9Isup2pTSVa3AcYkfg4H2n2g"
+          content="/public/Screenshot 2024-08-30 at 21.31.55.png"
         />
         <title>Erdenedari Ch</title>
         <meta property="og:title" content="Erdenedari Ch" />
