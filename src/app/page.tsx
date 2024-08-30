@@ -8,32 +8,29 @@ import Image from "next/image";
 import MailIcon from "@mui/icons-material/Mail";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { useGSAP } from "@gsap/react";
 
 export default function Home() {
   const [width, setWidth] = useState<number>(0);
   const [loading, setLoading] = useState(true);
-  let finalXPosition = 0;
-  let thirdFinalXPosition = 0;
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       setWidth(window.innerWidth);
-      window.addEventListener("resize", () => {
+
+      const handleResize = () => {
         setWidth(window.innerWidth);
-      });
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      return () => window.removeEventListener("resize", handleResize);
     }
   }, []);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    console.log("====================================");
-    console.log(document);
-    console.log("====================================");
-    if (
-      document &&
-      typeof document !== "undefined" &&
-      document.querySelectorAll
-    ) {
+    if (document && typeof document !== "undefined") {
       const sections = document.querySelectorAll(".section");
       if (sections) {
         sections.forEach((section) => {
@@ -85,66 +82,73 @@ export default function Home() {
     }
   }, []);
 
-  gsap.to(".model", {
-    scale: 0.9,
-    scrollTrigger: {
-      trigger: ".first_move",
-      toggleActions: "reverse",
-      start: "top center",
-      end: "bottom bottom",
-      // markers: true,
-      scrub: true,
-      onUpdate: (self) => {
-        finalXPosition = self.progress * width * 0.25;
-      },
-    },
-    x: width * 0.25,
-    ease: "power1.inOut",
-  });
-
-  gsap.fromTo(
-    ".model",
-    {
-      x: function () {
-        return finalXPosition;
-      },
-    },
-    {
-      x: -width * 0.25,
-      ease: "power1.inOut",
-      scale: 1.1,
-      scrollTrigger: {
-        trigger: ".second_move",
-        start: "top center",
-        end: "bottom center",
-        // markers: true,
-        scrub: true,
-        onUpdate: (self) => {
-          thirdFinalXPosition = self.progress * -width * 0.25;
+  useGSAP(
+    () => {
+      let finalXPosition = 0;
+      let thirdFinalXPosition = 0;
+      gsap.to(".model", {
+        scale: 0.9,
+        scrollTrigger: {
+          trigger: ".first_move",
+          toggleActions: "reverse",
+          start: "top center",
+          end: "bottom bottom",
+          // markers: true,
+          scrub: true,
+          onUpdate: (self) => {
+            finalXPosition = self.progress * width * 0.25;
+          },
         },
-      },
-    }
-  );
+        x: width * 0.25,
+        ease: "power1.inOut",
+      });
 
-  gsap.fromTo(
-    ".model",
-    {
-      x: function () {
-        return thirdFinalXPosition;
-      },
+      gsap.fromTo(
+        ".model",
+        {
+          x: function () {
+            return finalXPosition;
+          },
+        },
+        {
+          x: -width * 0.25,
+          ease: "power1.inOut",
+          scale: 1.1,
+          scrollTrigger: {
+            trigger: ".second_move",
+            start: "top center",
+            end: "bottom center",
+            // markers: true,
+            scrub: true,
+            onUpdate: (self) => {
+              thirdFinalXPosition = self.progress * -width * 0.25;
+            },
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".model",
+        {
+          x: function () {
+            return thirdFinalXPosition;
+          },
+        },
+        {
+          x: width * 0.25,
+          ease: "power1.inOut",
+          scale: 1,
+          scrollTrigger: {
+            trigger: ".third_move",
+            start: "top center",
+            end: "bottom center",
+            // markers: true,
+            scrub: true,
+          },
+        }
+      );
     },
-    {
-      x: width * 0.25,
-      ease: "power1.inOut",
-      scale: 1,
-      scrollTrigger: {
-        trigger: ".third_move",
-        start: "top center",
-        end: "bottom center",
-        // markers: true,
-        scrub: true,
-      },
-    }
+    { dependencies: [width], revertOnUpdate: true }
   );
 
   return (
