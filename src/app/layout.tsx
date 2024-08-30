@@ -23,14 +23,14 @@ export default function RootLayout({
         <meta property="og:title" content="Erdenedari Ch" />
         <meta name="description" content="Erdenedari Ch 3D Portfolio" />
         <meta property="og:description" content="Erdenedari Ch 3D Portfolio" />
-        {/* <meta
+        <meta
           property="og:url"
-          content="https://mdamiruddin-3dportfolio.vercel.app"
-        /> */}
-        {/* <meta
+          content="https://erdenedari-portfolio-qsim.vercel.app/"
+        />
+        <meta
           property="og:image"
-          content="https://raw.githubusercontent.com/MdAmiruddin/mdamiruddin-3dportfolio/main/public/social/screenshot.png"
-        /> */}
+          content="https://github.com/user-attachments/assets/dc3dfe44-6ff9-4b15-8dde-b39a107963a3"
+        />
         <meta name="twitter:card" content="summary" />
       </head>
       <body style={{ backgroundColor: "#7B57B1" }}>{children}</body>
