@@ -19,6 +19,10 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densityDpi=device-dpi, minimal-ui"
         />
+        <meta
+          property="og:image"
+          content="https://private-user-images.githubusercontent.com/107394167/363201829-e1a22fdc-caf3-439d-9e51-956f436145dd.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjUwMjc2MTIsIm5iZiI6MTcyNTAyNzMxMiwicGF0aCI6Ii8xMDczOTQxNjcvMzYzMjAxODI5LWUxYTIyZmRjLWNhZjMtNDM5ZC05ZTUxLTk1NmY0MzYxNDVkZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwODMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDgzMFQxNDE1MTJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yNjhiMWRhM2M1MzNjYmQ0MTVkYzc1ZmQ4OGRjODhhOWFjZjYyMmVjMjg2Yzk4YWIwZWQxMTZhZjdmZTZkOGM4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.8LUog59PgDc0XoafdG_9Isup2pTSVa3AcYkfg4H2n2g"
+        />
         <title>Erdenedari Ch</title>
         <meta property="og:title" content="Erdenedari Ch" />
         <meta name="description" content="Erdenedari Ch 3D Portfolio" />
@@ -27,11 +31,6 @@ export default function RootLayout({
           property="og:url"
           content="https://erdenedari-portfolio-qsim.vercel.app/"
         />
-        <meta
-          property="og:image"
-          content="https://private-user-images.githubusercontent.com/107394167/363201829-e1a22fdc-caf3-439d-9e51-956f436145dd.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjUwMjY4MjcsIm5iZiI6MTcyNTAyNjUyNywicGF0aCI6Ii8xMDczOTQxNjcvMzYzMjAxODI5LWUxYTIyZmRjLWNhZjMtNDM5ZC05ZTUxLTk1NmY0MzYxNDVkZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwODMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDgzMFQxNDAyMDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iYTc4OGIzNTlkMDc1ZDQzZTZiMzYzNjgzYzUyNDFlNWQ4NDgyYmEzMzkwZjA1OTk3Njc2YzUxNzgxNWMzMjM0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.pz0WmSDbu0qG0nKMevqbado81esqxd5BaAkujJzOdfQ"
-        />
-        <meta name="twitter:card" content="summary" />
       </head>
       <body style={{ backgroundColor: "#7B57B1" }}>{children}</body>
     </html>
