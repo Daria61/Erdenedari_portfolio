@@ -93,7 +93,6 @@ export default function Home() {
       let thirdFinalXPosition = 0;
       const splineElement = splineRef.current;
       let scale_ontime = 1;
-      let scale_ontime_last = 1;
 
       if (splineElement) {
         gsap.to(splineElement, {
@@ -105,9 +104,6 @@ export default function Home() {
             // markers: true,
             scrub: true,
             onUpdate: (self) => {
-              console.log("====================================");
-              console.log(width);
-              console.log("====================================");
               finalXPosition = width > 400 ? self.progress * width * 0.25 : 0;
               scale_ontime = 0.9;
             },
@@ -122,11 +118,15 @@ export default function Home() {
           {
             x: () => finalXPosition,
             scale: scale_ontime,
+            filter: "blur(0px)",
           },
           {
             x: width > 400 ? -width * 0.15 : 0,
             ease: "power1.inOut",
-            scale: 2.3,
+            scale: 2,
+            filter: "blur(0px)",
+            z: 1000,
+            translateZ: "-500px",
             scrollTrigger: {
               trigger: ".second_move",
               start: "top center",
@@ -136,7 +136,7 @@ export default function Home() {
               onUpdate: (self) => {
                 thirdFinalXPosition =
                   width > 400 ? self.progress * -width * 0.15 : 0;
-                scale_ontime_last = self.progress * 2.3;
+                // splineRef.current.setZoom(2);
               },
             },
           }
@@ -144,11 +144,12 @@ export default function Home() {
 
         gsap.fromTo(
           splineElement,
-          { x: () => thirdFinalXPosition },
+          { x: () => thirdFinalXPosition, filter: "blur(0px)" },
           {
             x: width > 400 ? width * 0.25 : 0,
             ease: "power1.inOut",
             scale: 1,
+            filter: "blur(0px)",
             scrollTrigger: {
               trigger: ".third_move",
               start: "top center",
@@ -197,12 +198,11 @@ export default function Home() {
         <Spline
           ref={splineRef}
           scene="https://prod.spline.design/qHRQOYPRxiwNXxBc/scene.splinecode"
-          onLoad={(data) => {
-            console.log(data);
-
+          onLoad={(spline) => {
             setTimeout(() => {
               setLoading(false);
             }, 1000);
+            // onLoad(spline);
           }}
         />
       </div>
@@ -482,7 +482,7 @@ export default function Home() {
               src="/AAO.png"
               width={500}
               height={300}
-              objectFit="contain"
+              // objectFit="contain"
               alt="Picture of the author"
             />
             <p
