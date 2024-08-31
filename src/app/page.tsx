@@ -44,7 +44,6 @@ export default function Home() {
       const sections = document.querySelectorAll(".section");
       const drag_left = document.querySelectorAll(".drag_left");
       const drag_right = document.querySelectorAll(".drag_right");
-      console.log(width);
 
       if (sections) {
         sections.forEach((section) => {
@@ -81,7 +80,7 @@ export default function Home() {
                   scrub: 0.6,
                   // markers: true,
                 },
-                scale: window.innerWidth > 400 ? 1 : 0,
+                scale: window.innerWidth > 300 ? 1 : 0,
               }
             );
             gsap.fromTo(
@@ -132,7 +131,7 @@ export default function Home() {
                   scrub: 0.6,
                   // markers: true,
                 },
-                scale: window.innerWidth > 400 ? 1 : 0,
+                scale: window.innerWidth > 300 ? 1 : 0,
               }
             );
             gsap.fromTo(
@@ -837,7 +836,7 @@ export default function Home() {
             <p className="section-text">
               Coding inspired me to start Young coders Program with my teacher
               who taught me algorithm. I noticed that many high school students
-              were unaware of what software engineers do,leading them to avoid
+              were unaware of what software engineers do, leading them to avoid
               choosing it as a major or to believe it was too difficult.
             </p>
             <br />
