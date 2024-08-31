@@ -10,6 +10,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { useGSAP } from "@gsap/react";
 import { Grid } from "@mui/material";
+import LinkIcon from "@mui/icons-material/Link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,10 +36,16 @@ export default function Home() {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    if (document && typeof document !== "undefined") {
+    if (
+      document &&
+      typeof document !== "undefined" &&
+      typeof window !== "undefined"
+    ) {
       const sections = document.querySelectorAll(".section");
       const drag_left = document.querySelectorAll(".drag_left");
       const drag_right = document.querySelectorAll(".drag_right");
+      console.log(width);
+
       if (sections) {
         sections.forEach((section) => {
           if (section.classList.contains("right")) {
@@ -74,7 +81,7 @@ export default function Home() {
                   scrub: 0.6,
                   // markers: true,
                 },
-                scale: 1,
+                scale: window.innerWidth > 400 ? 1 : 0,
               }
             );
             gsap.fromTo(
@@ -125,7 +132,7 @@ export default function Home() {
                   scrub: 0.6,
                   // markers: true,
                 },
-                scale: 1,
+                scale: window.innerWidth > 400 ? 1 : 0,
               }
             );
             gsap.fromTo(
@@ -280,14 +287,14 @@ export default function Home() {
               />
             </svg>
           </div>
-          <div className="hero-main" style={{ color: "#1E2249" }}>
+          <div className="hero-main" style={{ color: "#160C24" }}>
             <p className="hero-main-description">
               Senior engineer at ECM Billing Center
             </p>
             <h1 className="hero-main-title">Erdenedari Ch</h1>
           </div>
 
-          <div className="hero-second" style={{ color: "#1E2249" }}>
+          <div className="hero-second" style={{ color: "#160C24" }}>
             <p className="hero-second-subheading first-sub">Erdenedari</p>
             <p className="hero-second-subheading second-sub">Portfolio</p>
           </div>
@@ -321,12 +328,12 @@ export default function Home() {
             className="arrow-svg-wrapper"
             style={{ display: "flex", alignItems: "center" }}
           >
-            <MouseIcon sx={{ width: 24, height: 24, color: "#F4E9E1" }} />
+            <MouseIcon sx={{ width: 24, height: 24, color: "#0C0F26" }} />
             <p
               style={{
                 fontWeight: "400",
                 fontSize: "14px",
-                color: "#F4E9E1",
+                color: "#0C0F26",
               }}
             >
               DRAG
@@ -348,15 +355,16 @@ export default function Home() {
 
           <div className="section-detail-wrapper">
             <p className="section-text">
-              Hello World! I am Erdenedari. I am a senior backend developer at
-              ECM Billing Center company.
+              Hello World! I am Erdenedari and a senior backend developer at ECM
+              Billing Center company.
             </p>
             <p className="section-text">
-              I am always looking for an opportunity to deepen my computer
-              science knowledge and collaborate with others. I love seeing how
-              every function I write improves someone's life and saves their
-              time. I am a time-saver. I am excited to introduce my projects,
-              which have already made a significant impact on customers' work.
+              Always looking for an opportunity to deepen my computer science
+              knowledge and collaborate with others, I find satisfaction in
+              seeing how each function written improves lives and saves time.
+              Passionate about being a time-saver, I am excited to introduce my
+              projects, which have already made a significant impact on
+              customers' work.
             </p>
             <br />
             <br />
@@ -369,15 +377,129 @@ export default function Home() {
             </h1>
             <br />
             <br />
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <p>Pinecone Academy Student</p>[ Sep 2022 - Jun 2023 ]
-            </div>
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <p>American Corner Ulaanbaatar Inter</p>[ April 2022 - Feb 2023 ]
-            </div>
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <p>ECM Billing Center Software Developer</p>[ Jun 2023 - Present ]
-            </div>
+            <br />
+            <span className="section-number" style={{ color: "#7659AB" }}>
+              01
+            </span>
+            <p
+              style={{
+                backgroundColor: "#7659AB",
+                width: "100%",
+                height: "4px",
+                marginTop: 20,
+              }}
+            ></p>
+            <a href="https://pinecone.mn/morphosis" target="__blank">
+              <h3
+                className="section-heading"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 5,
+                }}
+              >
+                Pinecone Academy Student <LinkIcon />
+              </h3>
+            </a>
+            <p>[ Sep 2022 - Jun 2023 ]</p>
+
+            <br />
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6} md={4}>
+                <Image
+                  src="/pinecone.png"
+                  width={300}
+                  height={200}
+                  alt="Picture of the author"
+                />
+              </Grid>
+            </Grid>
+            <br />
+            <br />
+            <br />
+            <span className="section-number" style={{ color: "#7659AB" }}>
+              02
+            </span>
+            <p
+              style={{
+                backgroundColor: "#7659AB",
+                width: "100%",
+                height: "4px",
+                marginTop: 20,
+              }}
+            ></p>
+
+            <a
+              href="https://www.instagram.com/p/Ce7kXAAM2I1/?img_index=1"
+              target="__blank"
+            >
+              <h3
+                className="section-heading"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 5,
+                }}
+              >
+                American Corner Ulaanbaatar Inter <LinkIcon />
+              </h3>
+            </a>
+            <p>[ April 2022 - Feb 2023 ]</p>
+            <br />
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6} md={4}>
+                <Image
+                  src="/pinecone.png"
+                  width={300}
+                  height={200}
+                  alt="Picture of the author"
+                />
+              </Grid>
+            </Grid>
+            <br />
+            <br />
+            <br />
+            <span className="section-number" style={{ color: "#7659AB" }}>
+              03
+            </span>
+            <p
+              style={{
+                backgroundColor: "#7659AB",
+                width: "100%",
+                height: "4px",
+                marginTop: 20,
+              }}
+            ></p>
+            <a
+              href="https://www.facebook.com/ecmbillingcenter"
+              target="__blank"
+            >
+              <h3
+                className="section-heading"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 5,
+                }}
+              >
+                ECM Billing Center Software Developer <LinkIcon />
+              </h3>
+            </a>
+
+            <p>[ Jun 2023 - Present ]</p>
+            <br />
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6} md={4}>
+                <Image
+                  src="/ecmbc_.jpg"
+                  width={300}
+                  height={100}
+                  alt="Picture of the author"
+                  // objectFit="cover"
+                />
+              </Grid>
+            </Grid>
+            <br />
           </div>
         </section>
       </div>
@@ -411,12 +533,12 @@ export default function Home() {
             className="arrow-svg-wrapper"
             style={{ display: "flex", alignItems: "center" }}
           >
-            <MouseIcon sx={{ width: 24, height: 24, color: "#F4E9E1" }} />
+            <MouseIcon sx={{ width: 24, height: 24, color: "#0C0F26" }} />
             <p
               style={{
                 fontWeight: "400",
                 fontSize: "14px",
-                color: "#F4E9E1",
+                color: "#0C0F26",
               }}
             >
               DRAG
@@ -589,7 +711,16 @@ export default function Home() {
             <br />
             <br />
             <br />
-            <p>Here is the list of companies I connected to the service.</p>
+            <p
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 5,
+              }}
+            >
+              Here is the list of companies I connected to the service.
+              <LinkIcon />
+            </p>
             <br />
             <div
               style={{
@@ -681,6 +812,72 @@ export default function Home() {
                       src="/most.jpg"
                       width={50}
                       height={50}
+                      alt="Picture of the author"
+                      style={{ borderRadius: 8 }}
+                    />
+                  </a>
+                </Grid>
+              </Grid>
+            </div>
+
+            <div className="section-number" style={{ marginTop: 150 }}>
+              <span className="section-number" style={{ color: "#578DB1" }}>
+                04
+              </span>
+              <p
+                style={{
+                  backgroundColor: "#578DB1",
+                  width: "100%",
+                  height: "4px",
+                  marginTop: 20,
+                }}
+              ></p>
+            </div>
+            <h3 className="section-heading">Young coders Program</h3>
+            <p className="section-text">
+              Coding inspired me to start Young coders Program with my teacher
+              who taught me algorithm. I noticed that many high school students
+              were unaware of what software engineers do,leading them to avoid
+              choosing it as a major or to believe it was too difficult.
+            </p>
+            <br />
+            <p className="section-text">
+              We have graduated over 50 students across four sessions and
+              interviewed more than 250 students. A few of them have already
+              started studying computer science at university.
+            </p>
+            <br />
+            <p className="section-text">
+              The program lasts for two months and includes both hard and soft
+              skills lessons. By the end of program, participants will have
+              completed three projects: calculator, small game and simple ATM.
+            </p>
+            <br />
+            <br />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-evenly",
+              }}
+            >
+              <Grid container spacing={2}>
+                <Grid item xs={12}>
+                  <a href="https://www.m-bank.mn/" target="__blank">
+                    <Image
+                      src="/YCP.jpg"
+                      width={320}
+                      height={200}
+                      alt="Picture of the author"
+                      style={{ borderRadius: 8 }}
+                    />
+                  </a>
+                </Grid>
+                <Grid item xs={12}>
+                  <a href="https://gmobile.mn/" target="__blank">
+                    <Image
+                      src="/YCP2.jpg"
+                      width={320}
+                      height={200}
                       alt="Picture of the author"
                       style={{ borderRadius: 8 }}
                     />
