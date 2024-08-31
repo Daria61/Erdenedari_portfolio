@@ -184,14 +184,14 @@ a {
 
 .section-intro-wrapper {
   position: relative;
-  padding: 20% 5%;
+  padding: 15% 5% 5%;
   border-bottom: 2px solid var(--color-pink);
   /* padding-bottom: 400px; */
 }
 
 .section-detail-wrapper {
   /* position: relative; */
-  padding: 10% 5%;
+  padding: 8% 5%;
 }
 
 .section-heading {

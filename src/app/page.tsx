@@ -354,7 +354,7 @@ export default function Home() {
 
           <div className="section-detail-wrapper">
             <p className="section-text">
-              Hello World! I am Erdenedari and a senior backend developer at ECM
+              Hello World! I am Erdenedari, a senior backend developer at ECM
               Billing Center company.
             </p>
             <p className="section-text">
@@ -379,6 +379,43 @@ export default function Home() {
             <br />
             <span className="section-number" style={{ color: "#7659AB" }}>
               01
+            </span>
+            <p
+              style={{
+                backgroundColor: "#7659AB",
+                width: "100%",
+                height: "4px",
+                marginTop: 20,
+              }}
+            ></p>
+            <h3
+              className="section-heading"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 5,
+              }}
+            >
+              Languages & Technologies
+            </h3>
+            <p style={{ lineHeight: 2, fontSize: "16px" }}>+ HTML, CSS</p>
+            <p style={{ lineHeight: 2, fontSize: "16px" }}>
+              + Python, Javascript, Typescript
+            </p>
+            <p style={{ lineHeight: 2, fontSize: "16px" }}>
+              + Spline, Three JS, Git
+            </p>
+            <p style={{ lineHeight: 2, fontSize: "16px" }}>
+              + React JS, Next JS, Express, Django
+            </p>
+            <p style={{ lineHeight: 2, fontSize: "16px" }}>
+              + AWS S3, AWS RDS, AWS CloudFront, AWS CloudWatch
+            </p>
+            <br />
+            <br />
+            <br />
+            <span className="section-number" style={{ color: "#7659AB" }}>
+              02
             </span>
             <p
               style={{
@@ -413,21 +450,6 @@ export default function Home() {
                 />
               </Grid>
             </Grid>
-            <br />
-            <br />
-            <br />
-            <span className="section-number" style={{ color: "#7659AB" }}>
-              02
-            </span>
-            <p
-              style={{
-                backgroundColor: "#7659AB",
-                width: "100%",
-                height: "4px",
-                marginTop: 20,
-              }}
-            ></p>
-
             <a
               href="https://www.instagram.com/p/Ce7kXAAM2I1/?img_index=1"
               target="__blank"
@@ -440,7 +462,7 @@ export default function Home() {
                   gap: 5,
                 }}
               >
-                American Corner Ulaanbaatar Inter <LinkIcon />
+                Student Intership Program <LinkIcon />
               </h3>
             </a>
             <p>[ April 2022 - Feb 2023 ]</p>
@@ -469,6 +491,17 @@ export default function Home() {
                 marginTop: 20,
               }}
             ></p>
+            <h3
+              className="section-heading"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 5,
+              }}
+            >
+              Secondary School No.56
+            </h3>
+            <p>GPA 96.1/100</p>
             <a
               href="https://www.facebook.com/ecmbillingcenter"
               target="__blank"
