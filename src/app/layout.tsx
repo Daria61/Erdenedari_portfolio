@@ -21,7 +21,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="public/Screenshot 2024-08-30 at 21.31.55.png"
+          content="https://imagedelivery.net/A53tyVfMYrJUAjlD4mXzBQ/bbf365db-c00f-468b-6b71-a7bdd33bfa00/public"
         />
         <title>Erdenedari Ch</title>
         <meta property="og:title" content="Erdenedari Ch" />

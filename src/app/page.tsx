@@ -1,6 +1,6 @@
 "use client";
 import Spline from "@splinetool/react-spline";
-import { useState, useEffect, useLayoutEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap-trial/ScrollTrigger";
 import MouseIcon from "@mui/icons-material/Mouse";
@@ -9,14 +9,19 @@ import MailIcon from "@mui/icons-material/Mail";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { useGSAP } from "@gsap/react";
+import { Grid } from "@mui/material";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const [width, setWidth] = useState<number>(0);
   const [loading, setLoading] = useState(true);
+  const splineRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       setWidth(window.innerWidth);
+      window.scrollTo(0, 0);
 
       const handleResize = () => {
         setWidth(window.innerWidth);
@@ -86,67 +91,74 @@ export default function Home() {
     () => {
       let finalXPosition = 0;
       let thirdFinalXPosition = 0;
-      gsap.to(".model", {
-        scale: 0.9,
-        scrollTrigger: {
-          trigger: ".first_move",
-          toggleActions: "reverse",
-          start: "top center",
-          end: "bottom bottom",
-          // markers: true,
-          scrub: true,
-          onUpdate: (self) => {
-            finalXPosition = self.progress * width * 0.25;
-          },
-        },
-        x: width * 0.25,
-        ease: "power1.inOut",
-      });
+      const splineElement = splineRef.current;
+      let scale_ontime = 1;
+      let scale_ontime_last = 1;
 
-      gsap.fromTo(
-        ".model",
-        {
-          x: function () {
-            return finalXPosition;
-          },
-        },
-        {
-          x: -width * 0.25,
-          ease: "power1.inOut",
-          scale: 1.1,
+      if (splineElement) {
+        gsap.to(splineElement, {
           scrollTrigger: {
-            trigger: ".second_move",
+            trigger: ".first_move",
+            toggleActions: "reverse",
             start: "top center",
-            end: "bottom center",
+            end: "bottom bottom",
             // markers: true,
             scrub: true,
             onUpdate: (self) => {
-              thirdFinalXPosition = self.progress * -width * 0.25;
+              console.log("====================================");
+              console.log(width);
+              console.log("====================================");
+              finalXPosition = width > 400 ? self.progress * width * 0.25 : 0;
+              scale_ontime = 0.9;
             },
           },
-        }
-      );
-
-      gsap.fromTo(
-        ".model",
-        {
-          x: function () {
-            return thirdFinalXPosition;
-          },
-        },
-        {
-          x: width * 0.25,
+          x: width > 400 ? width * 0.25 : 0,
           ease: "power1.inOut",
-          scale: 1,
-          scrollTrigger: {
-            trigger: ".third_move",
-            start: "top center",
-            end: "bottom center",
-            // markers: true,
-            scrub: true,
+          scale: 0.9,
+        });
+
+        gsap.fromTo(
+          splineElement,
+          {
+            x: () => finalXPosition,
+            scale: scale_ontime,
           },
-        }
-      );
+          {
+            x: width > 400 ? -width * 0.15 : 0,
+            ease: "power1.inOut",
+            scale: 2.3,
+            scrollTrigger: {
+              trigger: ".second_move",
+              start: "top center",
+              end: "bottom center",
+              // markers: true,
+              scrub: true,
+              onUpdate: (self) => {
+                thirdFinalXPosition =
+                  width > 400 ? self.progress * -width * 0.15 : 0;
+                scale_ontime_last = self.progress * 2.3;
+              },
+            },
+          }
+        );
+
+        gsap.fromTo(
+          splineElement,
+          { x: () => thirdFinalXPosition },
+          {
+            x: width > 400 ? width * 0.25 : 0,
+            ease: "power1.inOut",
+            scale: 1,
+            scrollTrigger: {
+              trigger: ".third_move",
+              start: "top center",
+              end: "bottom center",
+              // markers: true,
+              scrub: true,
+            },
+          }
+        );
+      }
     },
     { dependencies: [width], revertOnUpdate: true }
   );
@@ -173,17 +185,21 @@ export default function Home() {
 
       <div
         style={{
-          width: "100%",
-          height: "100%",
+          width: width,
+          height: "100vh",
           position: "fixed",
           display: "flex",
           justifyContent: "center",
+          overflow: "hidden",
         }}
         className="model"
       >
         <Spline
+          ref={splineRef}
           scene="https://prod.spline.design/qHRQOYPRxiwNXxBc/scene.splinecode"
-          onLoad={() => {
+          onLoad={(data) => {
+            console.log(data);
+
             setTimeout(() => {
               setLoading(false);
             }, 1000);
@@ -191,7 +207,7 @@ export default function Home() {
         />
       </div>
 
-      {/* Two */}
+      {/* One */}
       <section className="page">
         <div className="hero-wrapper">
           <div className="arrow-svg-wrapper">
@@ -216,53 +232,63 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Two */}
       <div
         style={{
+          width: "100%",
+        }}
+        className="first_move section-margin"
+      ></div>
+
+      {/* Two */}
+      <div
+        className="col-s-12 col-6"
+        style={{
           zIndex: 0,
-          width: "50%",
+          // width: "50%",
         }}
       >
-        <div
-          style={{
-            width: width,
-          }}
-          className="first_move section-margin"
-        ></div>
-
         <section
           className="first-section section left"
           style={{ backgroundColor: "#F4E9E1" }}
         >
           <div className="section-intro-wrapper">
-            <h1 className="section-title">
-              <span style={{ color: "#7659AB" }} className="section-title-text">
-                About Me{" "}
-              </span>
-              <div
-                style={{
-                  position: "absolute",
-                  right: 100,
-                  top: 0,
-                }}
-              >
-                <div
-                  className="arrow-svg-wrapper"
-                  style={{ display: "flex", alignItems: "center" }}
+            <Grid container className="section-title">
+              <Grid item xs={12} md={6}>
+                <span
+                  style={{ color: "#7659AB" }}
+                  className="section-title-text"
                 >
-                  <MouseIcon sx={{ width: 24, height: 24, color: "#7659AB" }} />
-                  <p
-                    style={{
-                      fontWeight: "400",
-                      fontSize: "14px",
-                      color: "#7659AB",
-                    }}
+                  About Me{" "}
+                </span>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <div
+                  style={{
+                    position: "absolute",
+                    right: 100,
+                    top: 0,
+                  }}
+                >
+                  <div
+                    className="arrow-svg-wrapper"
+                    style={{ display: "flex", alignItems: "center" }}
                   >
-                    DRAG
-                  </p>
+                    <MouseIcon
+                      sx={{ width: 24, height: 24, color: "#7659AB" }}
+                    />
+                    <p
+                      style={{
+                        fontWeight: "400",
+                        fontSize: "14px",
+                        color: "#7659AB",
+                      }}
+                    >
+                      DRAG
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </h1>
+              </Grid>
+            </Grid>
           </div>
 
           <div className="section-detail-wrapper">
@@ -301,25 +327,27 @@ export default function Home() {
         </section>
       </div>
 
+      <div
+        style={{
+          width: "100%",
+        }}
+        className="second_move section-margin"
+      ></div>
+
       {/* Three */}
       <div
+        className="col-s-12 col-6 left_50"
         style={{
           zIndex: 0,
           alignItems: "flex-end",
-          width: "50%",
-          left: "50%",
+          // width: "50%",
+          // left: "50%",
           position: "relative",
         }}
       >
-        <div
-          style={{
-            width: width,
-          }}
-          className="second_move section-margin"
-        ></div>
         <section
           className="second-section section right"
-          style={{ left: 0, backgroundColor: "#F4E9E1" }}
+          style={{ backgroundColor: "#F4E9E1" }}
         >
           <div className="section-intro-wrapper blue-text blue-border">
             <h1 className="section-title blue-text blue-border">
@@ -382,26 +410,32 @@ export default function Home() {
               the project successfully.
             </p>
             <br />
-            <p style={{ justifyContent: "space-between", display: "flex" }}>
-              <Image
-                src="/signin.png"
-                width={180}
-                height={400}
-                alt="Picture of the author"
-              />
-              <Image
-                src="/home.png"
-                width={180}
-                height={400}
-                alt="Picture of the author"
-              />
-              <Image
-                src="/payment.png"
-                width={180}
-                height={400}
-                alt="Picture of the author"
-              />
-            </p>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6} md={4}>
+                <Image
+                  src="/signin.png"
+                  width={180}
+                  height={400}
+                  alt="Picture of the author"
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <Image
+                  src="/home.png"
+                  width={180}
+                  height={400}
+                  alt="Picture of the author"
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <Image
+                  src="/payment.png"
+                  width={180}
+                  height={400}
+                  alt="Picture of the author"
+                />
+              </Grid>
+            </Grid>
             <br />
             <p
               style={{
@@ -448,6 +482,7 @@ export default function Home() {
               src="/AAO.png"
               width={500}
               height={300}
+              objectFit="contain"
               alt="Picture of the author"
             />
             <p
@@ -501,84 +536,110 @@ export default function Home() {
                 justifyContent: "space-evenly",
               }}
             >
-              <Image
-                src="/m_bank.png"
-                width={100}
-                height={50}
-                alt="Picture of the author"
-                objectFit="cover"
-                style={{ borderRadius: 8 }}
-              />
-              <Image
-                src="/gmobile.png"
-                width={50}
-                height={50}
-                alt="Picture of the author"
-                objectFit="cover"
-                style={{ borderRadius: 8 }}
-              />
-
-              <Image
-                src="/ubtsts.jpeg"
-                width={50}
-                height={50}
-                alt="Picture of the author"
-                objectFit="cover"
-                style={{ borderRadius: 8 }}
-              />
-              <Image
-                src="/toki_long.png"
-                width={120}
-                height={50}
-                alt="Picture of the author"
-                objectFit="cover"
-                style={{ borderRadius: 8 }}
-              />
-              <Image
-                src="/unitel.png"
-                width={50}
-                height={50}
-                alt="Picture of the author"
-                objectFit="cover"
-                style={{ borderRadius: 8 }}
-              />
-              <Image
-                src="/skymedia.png"
-                width={50}
-                height={50}
-                alt="Picture of the author"
-                objectFit="cover"
-                style={{ borderRadius: 8 }}
-              />
-              <Image
-                src="/univision.png"
-                width={50}
-                height={50}
-                alt="Picture of the author"
-                objectFit="cover"
-                style={{ borderRadius: 12 }}
-              />
-              <Image
-                src="/most.jpg"
-                width={50}
-                height={50}
-                alt="Picture of the author"
-                objectFit="cover"
-                style={{ borderRadius: 8 }}
-              />
+              <Grid container spacing={2}>
+                <Grid item xs={4}>
+                  <a href="https://www.m-bank.mn/" target="__blank">
+                    <Image
+                      src="/m_bank.png"
+                      width={100}
+                      height={50}
+                      alt="Picture of the author"
+                      style={{ borderRadius: 8 }}
+                    />
+                  </a>
+                </Grid>
+                <Grid item xs={2}>
+                  <a href="https://gmobile.mn/" target="__blank">
+                    <Image
+                      src="/gmobile.png"
+                      width={50}
+                      height={50}
+                      alt="Picture of the author"
+                      style={{ borderRadius: 8 }}
+                    />
+                  </a>
+                </Grid>
+                <Grid item xs={2}>
+                  <a href="https://www.tog.mn/" target="__blank">
+                    <Image
+                      src="/ubtsts.jpeg"
+                      width={50}
+                      height={50}
+                      alt="Picture of the author"
+                      style={{ borderRadius: 8 }}
+                    />
+                  </a>
+                </Grid>
+                <Grid item xs={2}>
+                  <a href="https://www.unitel.mn/unitel/" target="__blank">
+                    <Image
+                      src="/unitel.png"
+                      width={50}
+                      height={50}
+                      alt="Picture of the author"
+                      style={{ borderRadius: 8 }}
+                    />
+                  </a>
+                </Grid>
+                <Grid item xs={4}>
+                  <a href="https://www.toki.mn/" target="__blank">
+                    <Image
+                      src="/toki_long.png"
+                      width={100}
+                      height={50}
+                      alt="Picture of the author"
+                      style={{ borderRadius: 8 }}
+                    />
+                  </a>
+                </Grid>
+                <Grid item xs={2}>
+                  <a href="https://www.skytel.mn/#/skytel" target="__blank">
+                    <Image
+                      src="/skymedia.png"
+                      width={50}
+                      height={50}
+                      alt="Picture of the author"
+                      style={{ borderRadius: 8 }}
+                    />
+                  </a>
+                </Grid>
+                <Grid item xs={2}>
+                  <a href="https://www.univision.mn/" target="__blank">
+                    <Image
+                      src="/univision.png"
+                      width={50}
+                      height={50}
+                      alt="Picture of the author"
+                      style={{ borderRadius: 12 }}
+                    />
+                  </a>
+                </Grid>
+                <Grid item xs={2}>
+                  <a href="https://www.mostmoney.mn/" target="__blank">
+                    <Image
+                      src="/most.jpg"
+                      width={50}
+                      height={50}
+                      alt="Picture of the author"
+                      style={{ borderRadius: 8 }}
+                    />
+                  </a>
+                </Grid>
+              </Grid>
             </div>
           </div>
         </section>
       </div>
 
+      <div
+        style={{
+          width: "100%",
+        }}
+        className="third_move section-margin"
+      ></div>
+
       {/* Four */}
-      <div style={{ width: "50%" }}>
-        <div
-          style={{
-            width: width,
-          }}
-          className="third_move section-margin"
-        ></div>
+      <div className="col-s-12 col-6">
         <section
           className="third-section section left"
           style={{ backgroundColor: "#F4E9E1" }}

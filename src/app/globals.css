@@ -49,23 +49,6 @@ a {
   --color-blue: var(--color-text-dark);
 }
 
-/* Experience --------------------------------------------- */
-
-.experience {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-}
-
-.experience-canvas {
-  width: 100%;
-  height: 100%;
-}
-
-.hidden {
-  display: none;
-}
-
 /* Preloader */
 .preloader {
   background-color: #aaaeda;
@@ -96,7 +79,7 @@ a {
   height: 10px;
   border-radius: 50%;
   margin: 6px;
-  background-color: var(--color-pink-light);
+  background-color: #301f49;
   animation: load 1s ease-in-out infinite;
 }
 
@@ -173,72 +156,15 @@ a {
   }
 }
 
-/* Toggle Bar --------------------------------------------- */
-/* .toggle-bar {
-  position: fixed;
-  display: flex;
-  opacity: 0;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  top: 48px;
-  right: 48px;
-  z-index: 99999999999999;
-}
-
-.sun-wrapper,
-.moon-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: var(--color-text);
-}
-
-.toggle-button {
-  cursor: pointer;
-  position: relative;
-  width: 56px;
-  height: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-pink);
-  border-radius: 999px;
-  margin: 0px 16px;
-  border: none;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-.toggle-circle {
-  position: absolute;
-  left: 6px;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: var(--color-background);
-  transition: all 0.2s ease-in-out;
-}
-
-.toggle-button:hover .toggle-circle {
-  transform: scale(0.9);
-}
-
-.slide {
-  left: 31px;
-} */
-
 /* Section Formatting --------------------------------------------- */
 .section-margin {
-  height: 3000px;
-  width: 100%;
+  height: 100vh;
 }
 
 .section {
   position: relative;
-  padding: 500px 4%;
+  padding: 50% 4%;
   margin: 0;
-  background-color: "#e5a1aa";
   overflow: hidden;
 }
 
@@ -252,33 +178,6 @@ a {
   margin-left: auto;
   border-top-left-radius: 700px 700px;
   border-bottom-left-radius: 0px 0px;
-}
-
-/* Progress bars */
-.progress-wrapper {
-  height: 0;
-  width: 12px;
-  z-index: 9999;
-}
-
-.progress-bar-wrapper-left {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.progress-bar-wrapper-right {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.progress-bar {
-  height: 100vh;
-  width: 100%;
-  background-color: var(--color-pink);
-  transform-origin: top center;
-  transform: scaleY(1);
 }
 
 /* Sections -------------- */
@@ -487,4 +386,90 @@ html.lenis body {
 
 .model {
   transform: translateX(0);
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {
+    width: 8.33%;
+  }
+  .col-s-2 {
+    width: 16.66%;
+  }
+  .col-s-3 {
+    width: 25%;
+  }
+  .col-s-4 {
+    width: 33.33%;
+  }
+  .col-s-5 {
+    width: 41.66%;
+  }
+  .col-s-6 {
+    width: 50%;
+  }
+  .col-s-7 {
+    width: 58.33%;
+  }
+  .col-s-8 {
+    width: 66.66%;
+  }
+  .col-s-9 {
+    width: 75%;
+  }
+  .col-s-10 {
+    width: 83.33%;
+  }
+  .col-s-11 {
+    width: 91.66%;
+  }
+  .col-s-12 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .left_50 {
+    left: 50%;
+  }
 }
