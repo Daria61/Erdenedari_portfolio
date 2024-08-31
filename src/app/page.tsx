@@ -80,7 +80,7 @@ export default function Home() {
                   scrub: 0.6,
                   // markers: true,
                 },
-                scale: window.innerWidth > 300 ? 1 : 0,
+                scale: window.innerWidth > 450 ? 1 : 0,
               }
             );
             gsap.fromTo(
@@ -131,7 +131,7 @@ export default function Home() {
                   scrub: 0.6,
                   // markers: true,
                 },
-                scale: window.innerWidth > 300 ? 1 : 0,
+                scale: window.innerWidth > 450 ? 1 : 0,
               }
             );
             gsap.fromTo(
