@@ -37,6 +37,8 @@ export default function Home() {
     gsap.registerPlugin(ScrollTrigger);
     if (document && typeof document !== "undefined") {
       const sections = document.querySelectorAll(".section");
+      const drag_left = document.querySelectorAll(".drag_left");
+      const drag_right = document.querySelectorAll(".drag_right");
       if (sections) {
         sections.forEach((section) => {
           if (section.classList.contains("right")) {
@@ -44,7 +46,7 @@ export default function Home() {
               borderTopLeftRadius: 10,
               scrollTrigger: {
                 trigger: section,
-                start: "top bottom",
+                start: "top center",
                 end: "top top",
                 scrub: 0.6,
                 // markers: true,
@@ -60,12 +62,42 @@ export default function Home() {
                 // markers: true,
               },
             });
+            gsap.fromTo(
+              drag_left,
+              { scale: 0 },
+              {
+                borderTopRightRadius: 10,
+                scrollTrigger: {
+                  trigger: section,
+                  start: "top center",
+                  end: "top top",
+                  scrub: 0.6,
+                  // markers: true,
+                },
+                scale: 1,
+              }
+            );
+            gsap.fromTo(
+              drag_left,
+              {},
+              {
+                borderTopRightRadius: 10,
+                scrollTrigger: {
+                  trigger: section,
+                  start: "bottom bottom",
+                  end: " center",
+                  scrub: 0.6,
+                  // markers: true,
+                },
+                scale: 0,
+              }
+            );
           } else {
             gsap.to(section, {
               borderTopRightRadius: 10,
               scrollTrigger: {
                 trigger: section,
-                start: "top bottom",
+                start: "top center",
                 end: "top top",
                 scrub: 0.6,
                 // markers: true,
@@ -81,6 +113,36 @@ export default function Home() {
                 // markers: true,
               },
             });
+            gsap.fromTo(
+              drag_right,
+              { scale: 0 },
+              {
+                borderTopRightRadius: 10,
+                scrollTrigger: {
+                  trigger: section,
+                  start: "top center",
+                  end: "top top",
+                  scrub: 0.6,
+                  // markers: true,
+                },
+                scale: 1,
+              }
+            );
+            gsap.fromTo(
+              drag_right,
+              {},
+              {
+                borderTopRightRadius: 10,
+                scrollTrigger: {
+                  trigger: section,
+                  start: "bottom bottom",
+                  end: " center",
+                  scrub: 0.6,
+                  // markers: true,
+                },
+                scale: 0,
+              }
+            );
           }
         });
       }
@@ -244,51 +306,44 @@ export default function Home() {
         className="col-s-12 col-6"
         style={{
           zIndex: 0,
-          // width: "50%",
         }}
       >
+        <div
+          style={{
+            position: "fixed",
+            zIndex: 9999,
+            right: 100,
+            top: 100,
+          }}
+          className="drag_right"
+        >
+          <div
+            className="arrow-svg-wrapper"
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <MouseIcon sx={{ width: 24, height: 24, color: "#F4E9E1" }} />
+            <p
+              style={{
+                fontWeight: "400",
+                fontSize: "14px",
+                color: "#F4E9E1",
+              }}
+            >
+              DRAG
+            </p>
+          </div>
+        </div>
+
         <section
           className="first-section section left"
           style={{ backgroundColor: "#F4E9E1" }}
         >
           <div className="section-intro-wrapper">
-            <Grid container className="section-title">
-              <Grid item xs={12} md={6}>
-                <span
-                  style={{ color: "#7659AB" }}
-                  className="section-title-text"
-                >
-                  About Me{" "}
-                </span>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <div
-                  style={{
-                    position: "absolute",
-                    right: 100,
-                    top: 0,
-                  }}
-                >
-                  <div
-                    className="arrow-svg-wrapper"
-                    style={{ display: "flex", alignItems: "center" }}
-                  >
-                    <MouseIcon
-                      sx={{ width: 24, height: 24, color: "#7659AB" }}
-                    />
-                    <p
-                      style={{
-                        fontWeight: "400",
-                        fontSize: "14px",
-                        color: "#7659AB",
-                      }}
-                    >
-                      DRAG
-                    </p>
-                  </div>
-                </div>
-              </Grid>
-            </Grid>
+            <p className="section-title">
+              <span style={{ color: "#7659AB" }} className="section-title-text">
+                About Me{" "}
+              </span>
+            </p>
           </div>
 
           <div className="section-detail-wrapper">
@@ -340,11 +395,34 @@ export default function Home() {
         style={{
           zIndex: 0,
           alignItems: "flex-end",
-          // width: "50%",
-          // left: "50%",
           position: "relative",
         }}
       >
+        <div
+          style={{
+            position: "fixed",
+            zIndex: 9999,
+            left: 100,
+            bottom: 100,
+          }}
+          className="drag_left"
+        >
+          <div
+            className="arrow-svg-wrapper"
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <MouseIcon sx={{ width: 24, height: 24, color: "#F4E9E1" }} />
+            <p
+              style={{
+                fontWeight: "400",
+                fontSize: "14px",
+                color: "#F4E9E1",
+              }}
+            >
+              DRAG
+            </p>
+          </div>
+        </div>
         <section
           className="second-section section right"
           style={{ backgroundColor: "#F4E9E1" }}
@@ -363,23 +441,7 @@ export default function Home() {
                   right: 100,
                   top: 0,
                 }}
-              >
-                <div
-                  className="arrow-svg-wrapper"
-                  style={{ display: "flex", alignItems: "center" }}
-                >
-                  <MouseIcon sx={{ width: 24, height: 24, color: "#578DB1" }} />
-                  <p
-                    style={{
-                      fontWeight: "400",
-                      fontSize: "14px",
-                      color: "#578DB1",
-                    }}
-                  >
-                    DRAG
-                  </p>
-                </div>
-              </div>
+              ></div>
             </h1>
           </div>
 
@@ -482,7 +544,6 @@ export default function Home() {
               src="/AAO.png"
               width={500}
               height={300}
-              // objectFit="contain"
               alt="Picture of the author"
             />
             <p
