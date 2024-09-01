@@ -470,7 +470,7 @@ export default function Home() {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6} md={4}>
                 <Image
-                  src="/pinecone.png"
+                  src="/SIP.jpeg"
                   width={300}
                   height={200}
                   alt="Picture of the author"
