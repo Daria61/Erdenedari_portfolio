@@ -499,7 +499,7 @@ export default function Home() {
                 gap: 5,
               }}
             >
-              Secondary School No.56
+              Erdmiin Urguu Complex School of Ulaanbaatar
             </h3>
             <p>GPA 96.1/100</p>
             <a
