@@ -396,6 +396,30 @@ export default function Home() {
                 gap: 5,
               }}
             >
+              Erdmiin Urguu Complex School of Ulaanbaatar
+            </h3>
+            <p>GPA 96.1/100</p>
+            <a href="https://pinecone.mn/morphosis" target="__blank">
+              <h3
+                className="section-heading"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 5,
+                }}
+              >
+                Pinecone Academy Student <LinkIcon />
+              </h3>
+            </a>
+            <p>[ Sep 2022 - Jun 2023 ]</p>
+            <h3
+              className="section-heading"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 5,
+              }}
+            >
               Languages & Technologies
             </h3>
             <p style={{ lineHeight: 2, fontSize: "16px" }}>+ HTML, CSS</p>
@@ -403,14 +427,15 @@ export default function Home() {
               + Python, Javascript, Typescript
             </p>
             <p style={{ lineHeight: 2, fontSize: "16px" }}>
-              + Spline, Three JS, Git
-            </p>
-            <p style={{ lineHeight: 2, fontSize: "16px" }}>
               + React JS, Next JS, Express, Django
             </p>
             <p style={{ lineHeight: 2, fontSize: "16px" }}>
-              + AWS S3, AWS RDS, AWS CloudFront, AWS CloudWatch
+              + AWS S3, AWS EC2, AWS CloudFront, AWS CloudWatch
             </p>
+            <p style={{ lineHeight: 2, fontSize: "16px" }}>
+              + Spline, Three JS, Git
+            </p>
+
             <br />
             <br />
             <br />
@@ -425,33 +450,9 @@ export default function Home() {
                 marginTop: 20,
               }}
             ></p>
-            <a href="https://pinecone.mn/morphosis" target="__blank">
-              <h3
-                className="section-heading"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 5,
-                }}
-              >
-                Pinecone Academy Student <LinkIcon />
-              </h3>
-            </a>
-            <p>[ Sep 2022 - Jun 2023 ]</p>
-
             <br />
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6} md={4}>
-                <Image
-                  src="/pinecone.png"
-                  width={300}
-                  height={200}
-                  alt="Picture of the author"
-                />
-              </Grid>
-            </Grid>
             <a
-              href="https://www.instagram.com/p/Ce7kXAAM2I1/?img_index=1"
+              href="https://www.instagram.com/p/Ch8ojXCveIy/?img_index=1"
               target="__blank"
             >
               <h3
@@ -462,35 +463,17 @@ export default function Home() {
                   gap: 5,
                 }}
               >
-                Student Intership Program <LinkIcon />
+                Co-Founder of Young Coders Programm (YCP)
+                <LinkIcon />
               </h3>
             </a>
-            <p>[ April 2022 - Feb 2023 ]</p>
+            <p>[ 2021 - 2022 ]</p>
             <br />
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6} md={4}>
-                <Image
-                  src="/SIP.jpeg"
-                  width={300}
-                  height={200}
-                  alt="Picture of the author"
-                />
-              </Grid>
-            </Grid>
-            <br />
-            <br />
-            <br />
-            <span className="section-number" style={{ color: "#7659AB" }}>
-              03
-            </span>
-            <p
-              style={{
-                backgroundColor: "#7659AB",
-                width: "100%",
-                height: "4px",
-                marginTop: 20,
-              }}
-            ></p>
+            <p> - Planned and perpared lessons </p>
+            <p> - Teached algorithm and python</p>
+            <p> - Mentored participants' team projects</p>
+            <p> - Interviewed +100 students</p>
+            <p> - Organized graduation ceremony three time</p>
             <h3
               className="section-heading"
               style={{
@@ -499,9 +482,14 @@ export default function Home() {
                 gap: 5,
               }}
             >
-              Erdmiin Urguu Complex School of Ulaanbaatar
+              Student Intership Program at American corner
             </h3>
-            <p>GPA 96.1/100</p>
+            <p>[ April 2022 - Feb 2023 ]</p>
+            <br />
+            <p> - Project manager </p>
+            <p> - Desinger </p>
+            <p> - Copy right writter</p>
+
             <a
               href="https://www.facebook.com/ecmbillingcenter"
               target="__blank"
@@ -517,20 +505,14 @@ export default function Home() {
                 ECM Billing Center Software Developer <LinkIcon />
               </h3>
             </a>
-
             <p>[ Jun 2023 - Present ]</p>
             <br />
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6} md={4}>
-                <Image
-                  src="/ecmbc_.jpg"
-                  width={300}
-                  height={100}
-                  alt="Picture of the author"
-                  // objectFit="cover"
-                />
-              </Grid>
-            </Grid>
+            <p> - Frontend developer </p>
+            <p> - Mobile developer </p>
+            <p> - Backend developer </p>
+            <p> - DevOps </p>
+            <br />
+            <br />
             <br />
           </div>
         </section>
@@ -893,17 +875,6 @@ export default function Home() {
               }}
             >
               <Grid container spacing={2}>
-                <Grid item xs={12}>
-                  <a href="https://www.m-bank.mn/" target="__blank">
-                    <Image
-                      src="/YCP.jpg"
-                      width={320}
-                      height={200}
-                      alt="Picture of the author"
-                      style={{ borderRadius: 8 }}
-                    />
-                  </a>
-                </Grid>
                 <Grid item xs={12}>
                   <a href="https://gmobile.mn/" target="__blank">
                     <Image
