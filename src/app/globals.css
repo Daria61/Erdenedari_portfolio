@@ -9,7 +9,7 @@
 html,
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: "#7659AB";
+  background-color: "#F6E8E0";
 }
 
 /* body {
@@ -30,7 +30,7 @@ a {
 
 :root {
   /* Light Theme Variables */
-  --color-text-light: #333332;
+  --color-text-light: #faf4e5;
   --color-background-light: #faf4e5;
   --color-pink-light: #e5a1aa;
   --color-green-light: #7ad0ac;
@@ -38,7 +38,7 @@ a {
 
   /* Dark Theme Variables */
   --color-text-dark: #faf4e5;
-  --color-background-dark: #8395cd;
+  --color-background-dark: #f6e8e0;
 }
 
 .dark-theme {
@@ -206,7 +206,7 @@ a {
   line-height: 2;
   margin-top: 18px;
   font-size: 16px;
-  color: var(--color-text);
+  color: "#faf4e5";
 }
 
 /* Fancy Decoration Part of Section */
@@ -273,12 +273,12 @@ a {
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1300px;
 }
 
 .hero-main {
   position: absolute;
-  bottom: 168px;
+  bottom: 115px;
   left: 0;
   color: "#57B1A8";
 }

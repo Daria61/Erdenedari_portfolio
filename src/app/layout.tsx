@@ -32,7 +32,7 @@ export default function RootLayout({
           content="https://erdenedari-portfolio-qsim.vercel.app/"
         />
       </head>
-      <body style={{ backgroundColor: "#A675F0" }}>{children}</body>
+      <body style={{ backgroundColor: "#f6e8e0" }}>{children}</body>
     </html>
   );
 }

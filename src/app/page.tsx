@@ -286,15 +286,15 @@ export default function Home() {
               />
             </svg>
           </div>
-          <div className="hero-main" style={{ color: "#160C24" }}>
+          <div className="hero-main" style={{ color: "#27006D" }}>
             <p className="hero-main-description">
               Senior engineer at ECM Billing Center
             </p>
-            <h1 className="hero-main-title">Erdenedari Ch</h1>
+            <h1 className="hero-main-title">ERDENEDARI CH</h1>
           </div>
 
-          <div className="hero-second" style={{ color: "#160C24" }}>
-            <p className="hero-second-subheading first-sub">Erdenedari</p>
+          <div className="hero-second" style={{ color: "#27006D" }}>
+            <p className="hero-second-subheading first-sub">PROJECT</p>
             <p className="hero-second-subheading second-sub">Portfolio</p>
           </div>
         </div>
@@ -342,22 +342,22 @@ export default function Home() {
 
         <section
           className="first-section section left"
-          style={{ backgroundColor: "#F4E9E1" }}
+          style={{ backgroundColor: "#60259D" }}
         >
           <div className="section-intro-wrapper">
             <p className="section-title">
-              <span style={{ color: "#7659AB" }} className="section-title-text">
+              <span style={{ color: "#EED6B4" }} className="section-title-text">
                 About Me{" "}
               </span>
             </p>
           </div>
 
           <div className="section-detail-wrapper">
-            <p className="section-text">
+            <p style={{ color: "#F6E8E0" }}>
               Hello World! I am Erdenedari, a senior backend developer at ECM
               Billing Center company.
             </p>
-            <p className="section-text">
+            <p style={{ color: "#F6E8E0" }}>
               Always looking for an opportunity to deepen my computer science
               knowledge and collaborate with others, I find satisfaction in
               seeing how each function written improves lives and saves time.
@@ -371,18 +371,18 @@ export default function Home() {
             <br />
             <br />
             <br />
-            <h1 id="education" style={{ color: "#7659AB" }}>
+            <h1 id="education" style={{ color: "#EED6B4" }}>
               EDUCATION & WORK EXPERIENCE
             </h1>
             <br />
             <br />
             <br />
-            <span className="section-number" style={{ color: "#7659AB" }}>
+            <span className="section-number" style={{ color: "#EED6B4" }}>
               01
             </span>
             <p
               style={{
-                backgroundColor: "#7659AB",
+                backgroundColor: "#EED6B4",
                 width: "100%",
                 height: "4px",
                 marginTop: 20,
@@ -394,11 +394,12 @@ export default function Home() {
                 display: "flex",
                 alignItems: "center",
                 gap: 5,
+                color: "#F6E8E0",
               }}
             >
               Erdmiin Urguu Complex School of Ulaanbaatar
             </h3>
-            <p>GPA 96.1/100</p>
+            <p style={{ color: "#F6E8E0" }}>GPA 96.1/100</p>
             <a href="https://pinecone.mn/morphosis" target="__blank">
               <h3
                 className="section-heading"
@@ -406,55 +407,79 @@ export default function Home() {
                   display: "flex",
                   alignItems: "center",
                   gap: 5,
+                  color: "#F6E8E0",
                 }}
               >
                 Pinecone Academy Student <LinkIcon />
               </h3>
             </a>
-            <p>[ Sep 2022 - Jun 2023 ]</p>
+            <p style={{ color: "#F6E8E0" }}>[ Sep 2022 - Jun 2023 ]</p>
             <h3
               className="section-heading"
               style={{
                 display: "flex",
                 alignItems: "center",
                 gap: 5,
+                color: "#F6E8E0",
               }}
             >
               Languages & Technologies
             </h3>
-            <p style={{ lineHeight: 2, fontSize: "16px" }}>+ HTML, CSS</p>
-            <p style={{ lineHeight: 2, fontSize: "16px" }}>
+            <p style={{ lineHeight: 2, fontSize: "16px", color: "#F6E8E0" }}>
+              + HTML, CSS
+            </p>
+            <p style={{ lineHeight: 2, fontSize: "16px", color: "#F6E8E0" }}>
               + Python, Javascript, Typescript
             </p>
-            <p style={{ lineHeight: 2, fontSize: "16px" }}>
+            <p style={{ lineHeight: 2, fontSize: "16px", color: "#F6E8E0" }}>
               + React JS, Next JS, Express, Django
             </p>
-            <p style={{ lineHeight: 2, fontSize: "16px" }}>
+            <p style={{ lineHeight: 2, fontSize: "16px", color: "#F6E8E0" }}>
               + AWS S3, AWS EC2, AWS CloudFront, AWS CloudWatch
             </p>
-            <p style={{ lineHeight: 2, fontSize: "16px" }}>
+            <p style={{ lineHeight: 2, fontSize: "16px", color: "#F6E8E0" }}>
               + Spline, Three JS, Git
             </p>
 
             <br />
             <br />
             <br />
-            <span className="section-number" style={{ color: "#7659AB" }}>
-              02
-            </span>
-            <p
-              style={{
-                backgroundColor: "#7659AB",
-                width: "100%",
-                height: "4px",
-                marginTop: 20,
-              }}
-            ></p>
-            <br />
-            <a
-              href="https://www.instagram.com/p/Ch8ojXCveIy/?img_index=1"
-              target="__blank"
-            >
+            <div style={{ color: "#F6E8E0" }}>
+              <span className="section-number" style={{ color: "#EED6B4" }}>
+                02
+              </span>
+              <p
+                style={{
+                  backgroundColor: "#EED6B4",
+                  width: "100%",
+                  height: "4px",
+                  marginTop: 20,
+                }}
+              ></p>
+              <br />
+              <a
+                href="https://www.instagram.com/p/Ch8ojXCveIy/?img_index=1"
+                target="__blank"
+              >
+                <h3
+                  className="section-heading"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 5,
+                  }}
+                >
+                  Co-Founder of Young Coders Programm (YCP)
+                  <LinkIcon />
+                </h3>
+              </a>
+              <p>[ 2021 - 2022 ]</p>
+              <br />
+              <p> - Planned and perpared lessons </p>
+              <p> - Teached algorithm and python</p>
+              <p> - Mentored participants' team projects</p>
+              <p> - Interviewed +100 students</p>
+              <p> - Organized graduation ceremony three time</p>
               <h3
                 className="section-heading"
                 style={{
@@ -463,54 +488,36 @@ export default function Home() {
                   gap: 5,
                 }}
               >
-                Co-Founder of Young Coders Programm (YCP)
-                <LinkIcon />
+                Student Intership Program at American corner
               </h3>
-            </a>
-            <p>[ 2021 - 2022 ]</p>
-            <br />
-            <p> - Planned and perpared lessons </p>
-            <p> - Teached algorithm and python</p>
-            <p> - Mentored participants' team projects</p>
-            <p> - Interviewed +100 students</p>
-            <p> - Organized graduation ceremony three time</p>
-            <h3
-              className="section-heading"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 5,
-              }}
-            >
-              Student Intership Program at American corner
-            </h3>
-            <p>[ April 2022 - Feb 2023 ]</p>
-            <br />
-            <p> - Project manager </p>
-            <p> - Desinger </p>
-            <p> - Copy right writter</p>
+              <p>[ April 2022 - Feb 2023 ]</p>
+              <br />
+              <p> - Project manager </p>
+              <p> - Desinger </p>
+              <p> - Copy right writter</p>
 
-            <a
-              href="https://www.facebook.com/ecmbillingcenter"
-              target="__blank"
-            >
-              <h3
-                className="section-heading"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 5,
-                }}
+              <a
+                href="https://www.facebook.com/ecmbillingcenter"
+                target="__blank"
               >
-                ECM Billing Center Software Developer <LinkIcon />
-              </h3>
-            </a>
-            <p>[ Jun 2023 - Present ]</p>
-            <br />
-            <p> - Frontend developer </p>
-            <p> - Mobile developer </p>
-            <p> - Backend developer </p>
-            <p> - DevOps </p>
+                <h3
+                  className="section-heading"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 5,
+                  }}
+                >
+                  ECM Billing Center Software Developer <LinkIcon />
+                </h3>
+              </a>
+              <p>[ Jun 2023 - Present ]</p>
+              <br />
+              <p> - Frontend developer </p>
+              <p> - Mobile developer </p>
+              <p> - Backend developer </p>
+              <p> - DevOps </p>
+            </div>
             <br />
             <br />
             <br />
@@ -532,6 +539,7 @@ export default function Home() {
           zIndex: 0,
           alignItems: "flex-end",
           position: "relative",
+          color: "#F6E8E0",
         }}
       >
         <div
@@ -561,13 +569,13 @@ export default function Home() {
         </div>
         <section
           className="second-section section right"
-          style={{ backgroundColor: "#F4E9E1" }}
+          style={{ backgroundColor: "#60259D" }}
         >
           <div className="section-intro-wrapper blue-text blue-border">
             <h1 className="section-title blue-text blue-border">
               <span
                 className="section-title-text blue-text"
-                style={{ color: "#578DB1" }}
+                style={{ color: "#AFF0FE" }}
               >
                 Projects
               </span>
@@ -582,12 +590,12 @@ export default function Home() {
           </div>
 
           <div className="section-detail-wrapper">
-            <span className="section-number" style={{ color: "#578DB1" }}>
+            <span className="section-number" style={{ color: "#AFF0FE" }}>
               01
             </span>
             <p
               style={{
-                backgroundColor: "#578DB1",
+                backgroundColor: "#AFF0FE",
                 width: "100%",
                 height: "4px",
                 marginTop: 20,
@@ -615,6 +623,7 @@ export default function Home() {
                   width={180}
                   height={400}
                   alt="Picture of the author"
+                  style={{ borderRadius: 5 }}
                 />
               </Grid>
               <Grid item xs={12} sm={6} md={4}>
@@ -623,6 +632,7 @@ export default function Home() {
                   width={180}
                   height={400}
                   alt="Picture of the author"
+                  style={{ borderRadius: 5 }}
                 />
               </Grid>
               <Grid item xs={12} sm={6} md={4}>
@@ -631,13 +641,14 @@ export default function Home() {
                   width={180}
                   height={400}
                   alt="Picture of the author"
+                  style={{ borderRadius: 5 }}
                 />
               </Grid>
             </Grid>
             <br />
             <p
               style={{
-                backgroundColor: "#578DB1",
+                backgroundColor: "#fff",
                 width: "110px",
                 padding: 5,
                 textAlign: "center",
@@ -648,19 +659,19 @@ export default function Home() {
                 href="https://apps.apple.com/mn/app/billcenter/id1574428727"
                 title="BillCenter App"
                 target="__blank"
-                style={{ textDecoration: "none", color: "#D5D7ED" }}
+                style={{ textDecoration: "none", color: "#60259D" }}
               >
                 See Project
               </a>
             </p>
 
             <div className="section-number" style={{ marginTop: 150 }}>
-              <span className="section-number" style={{ color: "#578DB1" }}>
+              <span className="section-number" style={{ color: "#AFF0FE" }}>
                 02
               </span>
               <p
                 style={{
-                  backgroundColor: "#578DB1",
+                  backgroundColor: "#AFF0FE",
                   width: "100%",
                   height: "4px",
                   marginTop: 20,
@@ -681,10 +692,11 @@ export default function Home() {
               width={500}
               height={300}
               alt="Picture of the author"
+              style={{ borderRadius: 5 }}
             />
             <p
               style={{
-                backgroundColor: "#578DB1",
+                backgroundColor: "#fff",
                 width: "200px",
                 padding: 5,
                 textAlign: "center",
@@ -696,19 +708,19 @@ export default function Home() {
                 href="https://sukh.billcenter.mn/"
                 target="__blank"
                 title="Association of apartment owners"
-                style={{ textDecoration: "none", color: "#D5D7ED" }}
+                style={{ textDecoration: "none", color: "#60259D" }}
               >
                 Visit Website
               </a>
             </p>
 
             <div className="section-number" style={{ marginTop: 150 }}>
-              <span className="section-number" style={{ color: "#578DB1" }}>
+              <span className="section-number" style={{ color: "#AFF0FE" }}>
                 03
               </span>
               <p
                 style={{
-                  backgroundColor: "#578DB1",
+                  backgroundColor: "#AFF0FE",
                   width: "100%",
                   height: "4px",
                   marginTop: 20,
@@ -835,12 +847,12 @@ export default function Home() {
             </div>
 
             <div className="section-number" style={{ marginTop: 150 }}>
-              <span className="section-number" style={{ color: "#578DB1" }}>
+              <span className="section-number" style={{ color: "#AFF0FE" }}>
                 04
               </span>
               <p
                 style={{
-                  backgroundColor: "#578DB1",
+                  backgroundColor: "#AFF0FE",
                   width: "100%",
                   height: "4px",
                   marginTop: 20,
@@ -903,13 +915,13 @@ export default function Home() {
       <div className="col-s-12 col-6">
         <section
           className="third-section section left"
-          style={{ backgroundColor: "#F4E9E1" }}
+          style={{ backgroundColor: "#60259D", color: "#F6E8E0" }}
         >
           <div className="section-intro-wrapper green-text green-border">
             <h1 className="section-title green-text green-border">
               <span
                 className="section-title-text green-text"
-                style={{ color: "#532576" }}
+                style={{ color: "#F7CA7E" }}
               >
                 Contact
               </span>
@@ -931,7 +943,7 @@ export default function Home() {
               href="mailto:ch.erdenedari0601@gmail.com"
               target="_blank"
             >
-              <MailIcon style={{ color: "#532576" }} />
+              <MailIcon style={{ color: "#F7CA7E" }} />
               <p> ch.erdenedari0601@gmail.com</p>
             </a>
             <a
@@ -939,7 +951,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/erdenedari-chuluunbaatar-a22119251/"
               target="_blank"
             >
-              <LinkedInIcon style={{ color: "#532576" }} />
+              <LinkedInIcon style={{ color: "#F7CA7E" }} />
               <p> Erdenedari Chuluunbaatar</p>
             </a>
             <a
@@ -947,7 +959,7 @@ export default function Home() {
               href="https://www.instagram.com/ruthh_daria/"
               target="_blank"
             >
-              <InstagramIcon style={{ color: "#532576" }} />
+              <InstagramIcon style={{ color: "#F7CA7E" }} />
               <p> ruthh_daria</p>
             </a>
             <br />
