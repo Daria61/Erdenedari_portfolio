@@ -38,7 +38,7 @@ a {
 
   /* Dark Theme Variables */
   --color-text-dark: #faf4e5;
-  --color-background-dark: #8395cd;
+  --color-background-dark: #f6e8e0;
 }
 
 .dark-theme {
@@ -166,6 +166,7 @@ a {
   padding: 50% 4%;
   margin: 0;
   overflow: hidden;
+  background-color: #60259d;
 }
 
 .left {
@@ -196,7 +197,7 @@ a {
 
 .section-heading {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.8;
   margin-top: 64px;
   color: var(--color-text);
@@ -206,7 +207,7 @@ a {
   line-height: 2;
   margin-top: 18px;
   font-size: 16px;
-  color: var(--color-text);
+  color: #f6e8e0;
 }
 
 /* Fancy Decoration Part of Section */
@@ -223,7 +224,10 @@ a {
   /* transform: skewY(25deg); */
   z-index: 5;
   text-transform: uppercase;
-  color: var(--color-pink);
+  color: #eed6b4;
+}
+.section-mid-title {
+  color: #eed6b4;
 }
 
 .styleOne,
@@ -257,8 +261,20 @@ a {
   /* position: absolute; */
   bottom: 15px;
   right: 0;
-  color: var(--color-pink);
+  color: #eed6b4;
   font-size: 24px;
+}
+
+.section-underline {
+  background-color: #eed6b4;
+  width: 100%;
+  height: 4px;
+  margin-top: 20;
+}
+.section-skill-text {
+  line-height: 2;
+  font-size: 16px;
+  color: #f6e8e0;
 }
 
 /* Hero section -------------------------------- */
@@ -273,12 +289,12 @@ a {
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1300px;
 }
 
 .hero-main {
   position: absolute;
-  bottom: 168px;
+  bottom: 115px;
   left: 0;
   color: "#57B1A8";
 }
@@ -309,7 +325,7 @@ a {
 /* Other colors override */
 
 .blue-text {
-  color: var(--color-blue);
+  color: #aff0fe;
 }
 
 .blue-border {
@@ -317,7 +333,7 @@ a {
 }
 
 .blue-background {
-  background-color: var(--color-blue);
+  background-color: #aff0fe;
 }
 
 .green-text {

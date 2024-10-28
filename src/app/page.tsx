@@ -287,14 +287,12 @@ export default function Home() {
             </svg>
           </div>
           <div className="hero-main" style={{ color: "#160C24" }}>
-            <p className="hero-main-description">
-              Senior engineer at ECM Billing Center
-            </p>
+            <p className="hero-main-description">Senior engineer</p>
             <h1 className="hero-main-title">Erdenedari Ch</h1>
           </div>
 
           <div className="hero-second" style={{ color: "#160C24" }}>
-            <p className="hero-second-subheading first-sub">Erdenedari</p>
+            <p className="hero-second-subheading first-sub">Projects</p>
             <p className="hero-second-subheading second-sub">Portfolio</p>
           </div>
         </div>
@@ -309,7 +307,7 @@ export default function Home() {
 
       {/* Two */}
       <div
-        className="col-s-12 col-6"
+        className="col-s-12 col-6 "
         style={{
           zIndex: 0,
         }}
@@ -340,15 +338,10 @@ export default function Home() {
           </div>
         </div>
 
-        <section
-          className="first-section section left"
-          style={{ backgroundColor: "#F4E9E1" }}
-        >
+        <section className="first-section section left">
           <div className="section-intro-wrapper">
             <p className="section-title">
-              <span style={{ color: "#7659AB" }} className="section-title-text">
-                About Me{" "}
-              </span>
+              <span className="section-title-text">About Me </span>
             </p>
           </div>
 
@@ -371,60 +364,28 @@ export default function Home() {
             <br />
             <br />
             <br />
-            <h1 id="education" style={{ color: "#7659AB" }}>
+            <h1 id="education" className="section-mid-title">
               EDUCATION & WORK EXPERIENCE
             </h1>
             <br />
             <br />
             <br />
-            <span className="section-number" style={{ color: "#7659AB" }}>
-              01
-            </span>
-            <p
-              style={{
-                backgroundColor: "#7659AB",
-                width: "100%",
-                height: "4px",
-                marginTop: 20,
-              }}
-            ></p>
+            <span className="section-number section-mid-title">01</span>
+            <p className="section-underline"></p>
             <h3
               className="section-heading"
               style={{
                 display: "flex",
                 alignItems: "center",
                 gap: 5,
+                color: "#F6E8E0",
               }}
             >
-              Languages & Technologies
+              Erdmiin Urguu Complex School of Ulaanbaatar
             </h3>
-            <p style={{ lineHeight: 2, fontSize: "16px" }}>+ HTML, CSS</p>
-            <p style={{ lineHeight: 2, fontSize: "16px" }}>
-              + Python, Javascript, Typescript
-            </p>
-            <p style={{ lineHeight: 2, fontSize: "16px" }}>
-              + Spline, Three JS, Git
-            </p>
-            <p style={{ lineHeight: 2, fontSize: "16px" }}>
-              + React JS, Next JS, Express, Django
-            </p>
-            <p style={{ lineHeight: 2, fontSize: "16px" }}>
-              + AWS S3, AWS RDS, AWS CloudFront, AWS CloudWatch
-            </p>
+            <p style={{ color: "#F6E8E0" }}>[ Apr 2017 - Jun 2022 ]</p>
             <br />
-            <br />
-            <br />
-            <span className="section-number" style={{ color: "#7659AB" }}>
-              02
-            </span>
-            <p
-              style={{
-                backgroundColor: "#7659AB",
-                width: "100%",
-                height: "4px",
-                marginTop: 20,
-              }}
-            ></p>
+            <p style={{ color: "#F6E8E0" }}>GPA 96.1/100</p>
             <a href="https://pinecone.mn/morphosis" target="__blank">
               <h3
                 className="section-heading"
@@ -432,13 +393,13 @@ export default function Home() {
                   display: "flex",
                   alignItems: "center",
                   gap: 5,
+                  color: "#F6E8E0",
                 }}
               >
                 Pinecone Academy Student <LinkIcon />
               </h3>
             </a>
-            <p>[ Sep 2022 - Jun 2023 ]</p>
-
+            <p style={{ color: "#F6E8E0" }}>[ Sep 2022 - Jun 2023 ]</p>
             <br />
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6} md={4}>
@@ -447,67 +408,44 @@ export default function Home() {
                   width={300}
                   height={200}
                   alt="Picture of the author"
+                  style={{ borderRadius: 5 }}
                 />
               </Grid>
             </Grid>
-            <a
-              href="https://www.instagram.com/p/Ce7kXAAM2I1/?img_index=1"
-              target="__blank"
-            >
-              <h3
-                className="section-heading"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 5,
-                }}
-              >
-                Student Intership Program <LinkIcon />
-              </h3>
-            </a>
-            <p>[ April 2022 - Feb 2023 ]</p>
-            <br />
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6} md={4}>
-                <Image
-                  src="/SIP.jpeg"
-                  width={300}
-                  height={200}
-                  alt="Picture of the author"
-                />
-              </Grid>
-            </Grid>
-            <br />
-            <br />
-            <br />
-            <span className="section-number" style={{ color: "#7659AB" }}>
-              03
-            </span>
-            <p
-              style={{
-                backgroundColor: "#7659AB",
-                width: "100%",
-                height: "4px",
-                marginTop: 20,
-              }}
-            ></p>
             <h3
               className="section-heading"
               style={{
                 display: "flex",
                 alignItems: "center",
                 gap: 5,
+                color: "#F6E8E0",
               }}
             >
-              Erdmiin Urguu Complex School of Ulaanbaatar
+              Languages & Technologies
             </h3>
-            <p>GPA 96.1/100</p>
+            <p className="section-skill-text">+ HTML, CSS</p>
+            <p className="section-skill-text">
+              + Python, Javascript, Typescript
+            </p>
+            <p className="section-skill-text">
+              + React JS, Next JS, Express, Django
+            </p>
+            <p className="section-skill-text">
+              + AWS S3, AWS EC2, AWS CloudFront, AWS CloudWatch
+            </p>
+            <p className="section-skill-text">+ Spline, Three JS, Git</p>
+
+            <br />
+            <br />
+            <br />
+            <span className="section-number section-mid-title">02</span>
+            <p className="section-underline"></p>
             <a
               href="https://www.facebook.com/ecmbillingcenter"
               target="__blank"
             >
               <h3
-                className="section-heading"
+                className="section-heading section-text"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -518,7 +456,12 @@ export default function Home() {
               </h3>
             </a>
 
-            <p>[ Jun 2023 - Present ]</p>
+            <p className="section-skill-text">[ Jun 2023 - Present ]</p>
+            <br />
+            <p style={{ color: "#f6e8e0" }}> - Frontend developer </p>
+            <p style={{ color: "#f6e8e0" }}> - Mobile developer </p>
+            <p style={{ color: "#f6e8e0" }}> - Backend developer </p>
+            <p style={{ color: "#f6e8e0" }}> - DevOps </p>
             <br />
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6} md={4}>
@@ -527,10 +470,48 @@ export default function Home() {
                   width={300}
                   height={100}
                   alt="Picture of the author"
-                  // objectFit="cover"
+                  style={{ borderRadius: 5 }}
                 />
               </Grid>
             </Grid>
+            <a
+              href="https://www.instagram.com/p/Ce7kXAAM2I1/?img_index=1"
+              target="__blank"
+            >
+              <h3
+                className="section-heading section-text"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 5,
+                }}
+              >
+                Student Intership Program at American corner <LinkIcon />
+              </h3>
+            </a>
+            <p className="section-skill-text">[ April 2022 - Feb 2023 ]</p>
+            <br />
+            <p style={{ color: "#f6e8e0" }}> - Project manager </p>
+            <p style={{ color: "#f6e8e0" }}> - Desinger </p>
+            <p style={{ color: "#f6e8e0" }}> - Copy right writter</p>
+            <br />
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6} md={4}>
+                <Image
+                  src="/SIP.png"
+                  width={300}
+                  height={200}
+                  alt="Picture of the author"
+                  style={{ borderRadius: 5 }}
+                />
+              </Grid>
+            </Grid>
+            <br />
+            <br />
+            <br />
+            {/* <span className="section-number section-mid-title">03</span>
+            <p className="section-underline"></p> */}
+
             <br />
           </div>
         </section>
@@ -577,18 +558,10 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <section
-          className="second-section section right"
-          style={{ backgroundColor: "#F4E9E1" }}
-        >
+        <section className="second-section section right">
           <div className="section-intro-wrapper blue-text blue-border">
             <h1 className="section-title blue-text blue-border">
-              <span
-                className="section-title-text blue-text"
-                style={{ color: "#578DB1" }}
-              >
-                Projects
-              </span>
+              <span className="section-title-text blue-text">Projects</span>
               <div
                 style={{
                   position: "absolute",
@@ -600,18 +573,14 @@ export default function Home() {
           </div>
 
           <div className="section-detail-wrapper">
-            <span className="section-number" style={{ color: "#578DB1" }}>
-              01
-            </span>
+            <span className="section-number blue-text">01</span>
             <p
+              className="section-underline"
               style={{
-                backgroundColor: "#578DB1",
-                width: "100%",
-                height: "4px",
-                marginTop: 20,
+                backgroundColor: "#aff0fe",
               }}
             ></p>
-            <h3 className="section-heading">BillCenter App</h3>
+            <h3 className="section-heading section-text">BillCenter App</h3>
 
             <p className="section-text">
               This project is a mobile application dedicated to paying bills. We
@@ -633,6 +602,7 @@ export default function Home() {
                   width={180}
                   height={400}
                   alt="Picture of the author"
+                  style={{ borderRadius: 5 }}
                 />
               </Grid>
               <Grid item xs={12} sm={6} md={4}>
@@ -641,6 +611,7 @@ export default function Home() {
                   width={180}
                   height={400}
                   alt="Picture of the author"
+                  style={{ borderRadius: 5 }}
                 />
               </Grid>
               <Grid item xs={12} sm={6} md={4}>
@@ -649,6 +620,7 @@ export default function Home() {
                   width={180}
                   height={400}
                   alt="Picture of the author"
+                  style={{ borderRadius: 5 }}
                 />
               </Grid>
             </Grid>
@@ -666,26 +638,24 @@ export default function Home() {
                 href="https://apps.apple.com/mn/app/billcenter/id1574428727"
                 title="BillCenter App"
                 target="__blank"
-                style={{ textDecoration: "none", color: "#D5D7ED" }}
+                style={{ textDecoration: "none", color: "#60259D" }}
               >
                 See Project
               </a>
             </p>
 
             <div className="section-number" style={{ marginTop: 150 }}>
-              <span className="section-number" style={{ color: "#578DB1" }}>
-                02
-              </span>
+              <span className="section-number blue-text">02</span>
               <p
+                className="section-underline"
                 style={{
-                  backgroundColor: "#578DB1",
-                  width: "100%",
-                  height: "4px",
-                  marginTop: 20,
+                  backgroundColor: "#aff0fe",
                 }}
               ></p>
             </div>
-            <h3 className="section-heading">Association of apartment owners</h3>
+            <h3 className="section-heading section-text">
+              Association of apartment owners
+            </h3>
             <p className="section-text">
               This project is a billing program for Association of apartment
               owners. It aims to calculate monthly invoice, including payments
@@ -699,6 +669,7 @@ export default function Home() {
               width={500}
               height={300}
               alt="Picture of the author"
+              style={{ borderRadius: 5 }}
             />
             <p
               style={{
@@ -714,26 +685,24 @@ export default function Home() {
                 href="https://sukh.billcenter.mn/"
                 target="__blank"
                 title="Association of apartment owners"
-                style={{ textDecoration: "none", color: "#D5D7ED" }}
+                style={{ textDecoration: "none", color: "#60259D" }}
               >
                 Visit Website
               </a>
             </p>
 
             <div className="section-number" style={{ marginTop: 150 }}>
-              <span className="section-number" style={{ color: "#578DB1" }}>
-                03
-              </span>
+              <span className="section-number blue-text">03</span>
               <p
+                className="section-underline"
                 style={{
-                  backgroundColor: "#578DB1",
-                  width: "100%",
-                  height: "4px",
-                  marginTop: 20,
+                  backgroundColor: "#aff0fe",
                 }}
               ></p>
             </div>
-            <h3 className="section-heading">Integration service</h3>
+            <h3 className="section-heading section-text">
+              Integration service
+            </h3>
             <p className="section-text">
               To more sufficient to users, we have started building integration
               service that shares all collected bills to banks and other payment
@@ -749,6 +718,7 @@ export default function Home() {
                 alignItems: "center",
                 gap: 5,
               }}
+              className="section-text"
             >
               Here is the list of companies I connected to the service.
               <LinkIcon />
@@ -853,19 +823,17 @@ export default function Home() {
             </div>
 
             <div className="section-number" style={{ marginTop: 150 }}>
-              <span className="section-number" style={{ color: "#578DB1" }}>
-                04
-              </span>
+              <span className="section-number blue-text">04</span>
               <p
+                className="section-underline"
                 style={{
-                  backgroundColor: "#578DB1",
-                  width: "100%",
-                  height: "4px",
-                  marginTop: 20,
+                  backgroundColor: "#aff0fe",
                 }}
               ></p>
             </div>
-            <h3 className="section-heading">Young coders Program</h3>
+            <h3 className="section-heading section-text">
+              Young coders Program
+            </h3>
             <p className="section-text">
               Coding inspired me to start Young coders Program with my teacher
               who taught me algorithm. I noticed that many high school students
@@ -894,17 +862,6 @@ export default function Home() {
             >
               <Grid container spacing={2}>
                 <Grid item xs={12}>
-                  <a href="https://www.m-bank.mn/" target="__blank">
-                    <Image
-                      src="/YCP.jpg"
-                      width={320}
-                      height={200}
-                      alt="Picture of the author"
-                      style={{ borderRadius: 8 }}
-                    />
-                  </a>
-                </Grid>
-                <Grid item xs={12}>
                   <a href="https://gmobile.mn/" target="__blank">
                     <Image
                       src="/YCP2.jpg"
@@ -917,6 +874,51 @@ export default function Home() {
                 </Grid>
               </Grid>
             </div>
+            <div className="section-number" style={{ marginTop: 150 }}>
+              <span className="section-number blue-text">05</span>
+              <p
+                className="section-underline"
+                style={{
+                  backgroundColor: "#aff0fe",
+                }}
+              ></p>
+            </div>
+            <h3 className="section-heading section-text">
+              Control Center Website
+            </h3>
+            <p className="section-text">
+              The website enables the company clients to control customer data
+              such as payments, VAT, and invoices. It also prepares four
+              different types of financial reports monthly. I worked on backend
+              and frontend developments.
+            </p>
+            <br />
+            <Image
+              src="/ControlCenter.png"
+              width={500}
+              height={300}
+              alt="Picture of the author"
+              style={{ borderRadius: 5 }}
+            />
+            <p
+              style={{
+                backgroundColor: "#578DB1",
+                width: "200px",
+                padding: 5,
+                textAlign: "center",
+                borderRadius: 5,
+                marginTop: 20,
+              }}
+            >
+              <a
+                href="https://new.billcenter.mn/signin"
+                target="__blank"
+                title="Association of apartment owners"
+                style={{ textDecoration: "none", color: "#60259D" }}
+              >
+                Visit Website
+              </a>
+            </p>
           </div>
         </section>
       </div>
@@ -930,18 +932,10 @@ export default function Home() {
 
       {/* Four */}
       <div className="col-s-12 col-6">
-        <section
-          className="third-section section left"
-          style={{ backgroundColor: "#F4E9E1" }}
-        >
+        <section className="third-section section left">
           <div className="section-intro-wrapper green-text green-border">
             <h1 className="section-title green-text green-border">
-              <span
-                className="section-title-text green-text"
-                style={{ color: "#532576" }}
-              >
-                Contact
-              </span>
+              <span className="section-title-text">Contact</span>
             </h1>
           </div>
 
@@ -960,24 +954,24 @@ export default function Home() {
               href="mailto:ch.erdenedari0601@gmail.com"
               target="_blank"
             >
-              <MailIcon style={{ color: "#532576" }} />
-              <p> ch.erdenedari0601@gmail.com</p>
+              <MailIcon style={{ color: "#F7CA7E" }} />
+              <p className="section-skill-text"> ch.erdenedari0601@gmail.com</p>
             </a>
             <a
               style={{ display: "flex", gap: 10, alignItems: "center" }}
               href="https://www.linkedin.com/in/erdenedari-chuluunbaatar-a22119251/"
               target="_blank"
             >
-              <LinkedInIcon style={{ color: "#532576" }} />
-              <p> Erdenedari Chuluunbaatar</p>
+              <LinkedInIcon style={{ color: "#F7CA7E" }} />
+              <p className="section-skill-text"> Erdenedari Chuluunbaatar</p>
             </a>
             <a
               style={{ display: "flex", gap: 10, alignItems: "center" }}
               href="https://www.instagram.com/ruthh_daria/"
               target="_blank"
             >
-              <InstagramIcon style={{ color: "#532576" }} />
-              <p> ruthh_daria</p>
+              <InstagramIcon style={{ color: "#F7CA7E" }} />
+              <p className="section-skill-text"> ruthh_daria</p>
             </a>
             <br />
             <br />
@@ -989,7 +983,7 @@ export default function Home() {
             <br />
             <br />
             <footer className="footer">
-              <span className="footer__copyright">
+              <span className="footer__copyright section-mid-title">
                 Copyright &copy; 2024 - Erdenedari Ch
               </span>
             </footer>
