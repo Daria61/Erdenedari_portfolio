@@ -428,18 +428,51 @@ export default function Home() {
               + Python, Javascript, Typescript
             </p>
             <p className="section-skill-text">
-              + React JS, Next JS, Express, Django
+              + React JS, Next JS, Express, Node, Django
+            </p>
+            <p className="section-skill-text">
+              + Prisma, MongoDB, Mongoose, Graphql, PostgreSQL
             </p>
             <p className="section-skill-text">
               + AWS S3, AWS EC2, AWS CloudFront, AWS CloudWatch
             </p>
-            <p className="section-skill-text">+ Spline, Three JS, Git</p>
-
+            <p className="section-skill-text">
+              + Spline, Three JS, GitHub, GitLab, Render, Vercel
+            </p>
             <br />
             <br />
             <br />
             <span className="section-number section-mid-title">02</span>
             <p className="section-underline"></p>
+            <a href="https://pinecone.academy/about-us" target="__blank">
+              <h3
+                className="section-heading section-text"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 5,
+                }}
+              >
+                Pinecone Academy Teacher and Software Developer <LinkIcon />
+              </h3>
+            </a>
+
+            <p className="section-skill-text">[ Nov 2024 - Present ]</p>
+            <br />
+            <p style={{ color: "#f6e8e0" }}> - Teacher </p>
+            <p style={{ color: "#f6e8e0" }}> - Full stack developer </p>
+            <br />
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6} md={4}>
+                <Image
+                  src="/pineconeacademy.png"
+                  width={300}
+                  height={180}
+                  alt="Picture of the author"
+                  style={{ borderRadius: 5 }}
+                />
+              </Grid>
+            </Grid>
             <a
               href="https://www.facebook.com/ecmbillingcenter"
               target="__blank"
@@ -456,7 +489,7 @@ export default function Home() {
               </h3>
             </a>
 
-            <p className="section-skill-text">[ Jun 2023 - Present ]</p>
+            <p className="section-skill-text">[ Jun 2023 - Oct 2024]</p>
             <br />
             <p style={{ color: "#f6e8e0" }}> - Frontend developer </p>
             <p style={{ color: "#f6e8e0" }}> - Mobile developer </p>
@@ -644,7 +677,7 @@ export default function Home() {
               </a>
             </p>
 
-            <div className="section-number" style={{ marginTop: 150 }}>
+            <div className="section-number" style={{ marginTop: 100 }}>
               <span className="section-number blue-text">02</span>
               <p
                 className="section-underline"
@@ -691,7 +724,7 @@ export default function Home() {
               </a>
             </p>
 
-            <div className="section-number" style={{ marginTop: 150 }}>
+            <div className="section-number" style={{ marginTop: 100 }}>
               <span className="section-number blue-text">03</span>
               <p
                 className="section-underline"
@@ -822,7 +855,7 @@ export default function Home() {
               </Grid>
             </div>
 
-            <div className="section-number" style={{ marginTop: 150 }}>
+            <div className="section-number" style={{ marginTop: 100 }}>
               <span className="section-number blue-text">04</span>
               <p
                 className="section-underline"
@@ -874,7 +907,7 @@ export default function Home() {
                 </Grid>
               </Grid>
             </div>
-            <div className="section-number" style={{ marginTop: 150 }}>
+            <div className="section-number" style={{ marginTop: 100 }}>
               <span className="section-number blue-text">05</span>
               <p
                 className="section-underline"
@@ -912,6 +945,53 @@ export default function Home() {
             >
               <a
                 href="https://new.billcenter.mn/signin"
+                target="__blank"
+                title="Association of apartment owners"
+                style={{ textDecoration: "none", color: "#60259D" }}
+              >
+                Visit Website
+              </a>
+            </p>
+
+            <div className="section-number" style={{ marginTop: 100 }}>
+              <span className="section-number blue-text">06</span>
+              <p
+                className="section-underline"
+                style={{
+                  backgroundColor: "#aff0fe",
+                }}
+              ></p>
+            </div>
+            <h3 className="section-heading section-text">
+              Pinebaatars Platform
+            </h3>
+            <p className="section-text">
+              Recently, I have been working on a Pinebaatars Platform that
+              unites professionals with diverse technological skills and
+              experiences. The platform offers standardized CVs and a
+              professional evaluation system, streamlining the hiring process
+              and making it more efficient.
+            </p>
+            <br />
+            <Image
+              src="/pinebaatars_platform.png"
+              width={500}
+              height={280}
+              alt="Picture of the author"
+              style={{ borderRadius: 5 }}
+            />
+            <p
+              style={{
+                backgroundColor: "#578DB1",
+                width: "200px",
+                padding: 5,
+                textAlign: "center",
+                borderRadius: 5,
+                marginTop: 20,
+              }}
+            >
+              <a
+                href="https://pinebaatar.pinecone.mn/?_gl=1*10w442*_ga*MTI2MTkzNzY1Mi4xNzI1MTA5MTM4*_ga_VJP85C0PZC*MTczNTIzMDY2Mi44LjAuMTczNTIzMDY2Mi42MC4wLjA."
                 target="__blank"
                 title="Association of apartment owners"
                 style={{ textDecoration: "none", color: "#60259D" }}
