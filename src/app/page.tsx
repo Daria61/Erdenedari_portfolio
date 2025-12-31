@@ -1,5 +1,5 @@
 "use client";
-import Spline from "@splinetool/react-spline";
+
 import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap-trial/ScrollTrigger";
@@ -11,8 +11,16 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { useGSAP } from "@gsap/react";
 import { Grid } from "@mui/material";
 import LinkIcon from "@mui/icons-material/Link";
+import Loader from "./components/Loader";
+import SplineModel from "./components/SplineModel";
+import HeroSection from "./components/HeroSection";
+import DragIcon from "./components/DragIcon";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const Separator = ({ className }: { className: string }) => {
+  return <div className={className}></div>;
+};
 
 export default function Home() {
   const [width, setWidth] = useState<number>(0);
@@ -238,73 +246,15 @@ export default function Home() {
         position: "relative",
       }}
     >
-      {loading && (
-        <div className="preloader">
-          <div className="preloader-wrapper">
-            <div className="loading">
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Model */}
-
-      <div
-        style={{
-          width: width,
-          height: "100vh",
-          position: "fixed",
-          display: "flex",
-          justifyContent: "center",
-          overflow: "hidden",
-        }}
-        className="model"
-      >
-        <Spline
-          ref={splineRef}
-          scene="https://prod.spline.design/qHRQOYPRxiwNXxBc/scene.splinecode"
-          onLoad={(spline) => {
-            setTimeout(() => {
-              setLoading(false);
-            }, 1000);
-            // onLoad(spline);
-          }}
-        />
-      </div>
-
-      {/* One */}
-      <section className="page">
-        <div className="hero-wrapper">
-          <div className="arrow-svg-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
-              <path
-                fill="currentColor"
-                d="M12 14.95q-.2 0-.375-.063-.175-.062-.325-.212L6.675 10.05q-.275-.275-.262-.688.012-.412.287-.687.275-.275.7-.275.425 0 .7.275l3.9 3.9 3.925-3.925q.275-.275.688-.263.412.013.687.288.275.275.275.7 0 .425-.275.7l-4.6 4.6q-.15.15-.325.212-.175.063-.375.063Z"
-              />
-            </svg>
-          </div>
-          <div className="hero-main" style={{ color: "#160C24" }}>
-            <p className="hero-main-description">Senior engineer</p>
-            <h1 className="hero-main-title">Erdenedari Ch</h1>
-          </div>
-
-          <div className="hero-second" style={{ color: "#160C24" }}>
-            <p className="hero-second-subheading first-sub">Projects</p>
-            <p className="hero-second-subheading second-sub">Portfolio</p>
-          </div>
-        </div>
-      </section>
-
-      <div
-        style={{
-          width: "100%",
-        }}
-        className="first_move section-margin"
-      ></div>
-
+      <Loader loading={loading} />
+      <SplineModel
+        width={width}
+        splineRef={splineRef}
+        setLoading={setLoading}
+      />
+      <HeroSection />
+      <DragIcon position="right" />
+      <Separator className="first_move section-margin w-[100%]" />
       {/* Two */}
       <div
         className="col-s-12 col-6 "
@@ -312,32 +262,6 @@ export default function Home() {
           zIndex: 0,
         }}
       >
-        <div
-          style={{
-            position: "fixed",
-            zIndex: 9999,
-            right: 100,
-            top: 100,
-          }}
-          className="drag_right"
-        >
-          <div
-            className="arrow-svg-wrapper"
-            style={{ display: "flex", alignItems: "center" }}
-          >
-            <MouseIcon sx={{ width: 24, height: 24, color: "#0C0F26" }} />
-            <p
-              style={{
-                fontWeight: "400",
-                fontSize: "14px",
-                color: "#0C0F26",
-              }}
-            >
-              DRAG
-            </p>
-          </div>
-        </div>
-
         <section className="first-section section left">
           <div className="section-intro-wrapper">
             <p className="section-title">
@@ -347,8 +271,8 @@ export default function Home() {
 
           <div className="section-detail-wrapper">
             <p className="section-text">
-              Hello World! I am Erdenedari, a senior backend developer at ECM
-              Billing Center company.
+              Hello World! I am Erdenedari, a instructor and software engineer
+              at Pinecone Academy.
             </p>
             <p className="section-text">
               Always looking for an opportunity to deepen my computer science
@@ -358,13 +282,7 @@ export default function Home() {
               projects, which have already made a significant impact on
               customers' work.
             </p>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <h1 id="education" className="section-mid-title">
+            <h1 id="education" className="section-mid-title ">
               EDUCATION & WORK EXPERIENCE
             </h1>
             <br />
@@ -549,14 +467,7 @@ export default function Home() {
           </div>
         </section>
       </div>
-
-      <div
-        style={{
-          width: "100%",
-        }}
-        className="second_move section-margin"
-      ></div>
-
+      <Separator className="second_move section-margin w-[100%]" />
       {/* Three */}
       <div
         className="col-s-12 col-6 left_50"
@@ -566,31 +477,6 @@ export default function Home() {
           position: "relative",
         }}
       >
-        <div
-          style={{
-            position: "fixed",
-            zIndex: 9999,
-            left: 100,
-            bottom: 100,
-          }}
-          className="drag_left"
-        >
-          <div
-            className="arrow-svg-wrapper"
-            style={{ display: "flex", alignItems: "center" }}
-          >
-            <MouseIcon sx={{ width: 24, height: 24, color: "#0C0F26" }} />
-            <p
-              style={{
-                fontWeight: "400",
-                fontSize: "14px",
-                color: "#0C0F26",
-              }}
-            >
-              DRAG
-            </p>
-          </div>
-        </div>
         <section className="second-section section right">
           <div className="section-intro-wrapper blue-text blue-border">
             <h1 className="section-title blue-text blue-border">
@@ -1002,14 +888,7 @@ export default function Home() {
           </div>
         </section>
       </div>
-
-      <div
-        style={{
-          width: "100%",
-        }}
-        className="third_move section-margin"
-      ></div>
-
+      <Separator className="third_move section-margin w-[100%]" />
       {/* Four */}
       <div className="col-s-12 col-6">
         <section className="third-section section left">

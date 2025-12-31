@@ -290,6 +290,7 @@ a {
   width: 100%;
   margin: 0 auto;
   max-width: 1300px;
+  pointer-events: none;
 }
 
 .hero-main {
@@ -297,6 +298,7 @@ a {
   bottom: 115px;
   left: 0;
   color: "#57B1A8";
+  pointer-events: none;
 }
 
 .hero-second {
@@ -304,6 +306,7 @@ a {
   top: calc(50% - 120px);
   right: 0;
   color: var(--color-text);
+  pointer-events: none;
 }
 
 .hero-main-title {
